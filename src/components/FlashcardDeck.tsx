@@ -18,42 +18,46 @@ interface FlashcardDeckProps {
 export default function FlashcardDeck({ flashcards, subject, topic, onReset }: FlashcardDeckProps) {
   const [current, setCurrent] = useState(0)
 
-  const prev = () => setCurrent((c) => Math.max(0, c - 1))
-  const next = () => setCurrent((c) => Math.min(flashcards.length - 1, c + 1))
+  const prev = () => setCurrent(c => Math.max(0, c - 1))
+  const next = () => setCurrent(c => Math.min(flashcards.length - 1, c + 1))
 
   return (
-    <div className="flex flex-col items-center gap-6 w-full max-w-5xl mx-auto px-4">
+    <div className="w-full max-w-4xl mx-auto px-6 flex flex-col gap-8">
+      {/* Header */}
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800">{topic}</h2>
-        <p className="text-sm text-gray-500 mt-1">{subject} &mdash; GCSE Level</p>
+        <h2 className="text-3xl font-bold text-slate-800">{topic}</h2>
+        <p className="text-sm text-slate-500 mt-1.5 font-medium">{subject} &mdash; GCSE Level</p>
       </div>
 
-      <div className="w-full">
-        <Flashcard
-          key={current}
-          question={flashcards[current].question}
-          answer={flashcards[current].answer}
-          index={current}
-          total={flashcards.length}
-        />
-      </div>
+      {/* Card — full width of the container */}
+      <Flashcard
+        key={current}
+        question={flashcards[current].question}
+        answer={flashcards[current].answer}
+        index={current}
+        total={flashcards.length}
+      />
 
-      <div className="flex items-center gap-4">
+      {/* Navigation */}
+      <div className="flex items-center justify-between">
         <button
           onClick={prev}
           disabled={current === 0}
-          className="px-6 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 font-medium shadow-sm hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-600 font-semibold shadow-sm hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition text-sm"
         >
           ← Previous
         </button>
 
-        <div className="flex flex-wrap justify-center gap-1.5 max-w-xs">
+        {/* Dot indicators */}
+        <div className="flex flex-wrap justify-center gap-2 max-w-sm">
           {flashcards.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full transition ${
-                i === current ? 'bg-indigo-600' : 'bg-gray-200 hover:bg-gray-300'
+              className={`rounded-full transition-all duration-200 ${
+                i === current
+                  ? 'bg-indigo-600 w-5 h-3'
+                  : 'bg-slate-200 hover:bg-slate-300 w-3 h-3'
               }`}
             />
           ))}
@@ -62,18 +66,20 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
         <button
           onClick={next}
           disabled={current === flashcards.length - 1}
-          className="px-6 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 font-medium shadow-sm hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-600 font-semibold shadow-sm hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition text-sm"
         >
           Next →
         </button>
       </div>
 
-      <button
-        onClick={onReset}
-        className="mt-2 text-sm text-indigo-600 hover:text-indigo-800 underline underline-offset-2 transition"
-      >
-        Generate new flashcards
-      </button>
+      <div className="text-center">
+        <button
+          onClick={onReset}
+          className="text-sm text-indigo-600 hover:text-indigo-800 font-medium underline underline-offset-4 transition"
+        >
+          ← Generate new flashcards
+        </button>
+      </div>
     </div>
   )
 }
