@@ -22,7 +22,7 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
   const next = () => setCurrent((c) => Math.min(flashcards.length - 1, c + 1))
 
   return (
-    <div className="flex flex-col items-center gap-6 w-full max-w-2xl mx-auto">
+    <div className="flex flex-col items-center gap-6 w-full max-w-5xl mx-auto">
       <div className="text-center">
         <h2 className="text-2xl font-bold text-gray-800">{topic}</h2>
         <p className="text-sm text-gray-500 mt-1">{subject} &mdash; GCSE Level</p>
@@ -45,7 +45,7 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
           ← Previous
         </button>
 
-        <div className="flex gap-1.5">
+        <div className="flex flex-wrap justify-center gap-1.5 max-w-xs">
           {flashcards.map((_, i) => (
             <button
               key={i}

@@ -8,33 +8,65 @@ interface FlashcardData {
   answer: string
 }
 
-const SUBJECTS = [
-  'Biology',
-  'Chemistry',
-  'Physics',
-  'Mathematics',
-  'English Literature',
-  'English Language',
-  'History',
-  'Geography',
-  'Computer Science',
-  'French',
-  'Spanish',
-  'German',
-  'Religious Studies',
-  'Business Studies',
-  'Economics',
-  'Psychology',
-  'Sociology',
-  'Art & Design',
-  'Music',
-  'Physical Education',
-  'Other',
-]
+const SUBJECT_TOPICS: Record<string, string[]> = {
+  Biology: [
+    'Cells, Organelles and Microscopy',
+    'Breathing and Respiration',
+    'Variation and Inheritance',
+    'Photosynthesis and Plant Reproduction',
+  ],
+  Chemistry: [
+    'Atomic Structure and the Periodic Table',
+    'Heat Energy Changes',
+    'Reactivity Series, Metals, and Materials',
+    'Earth and Atmosphere',
+  ],
+  'Physics & Electronics': [
+    'Electronic Components and their Symbols',
+    'The Function and Purpose of a Thyristor',
+    'Circuit Diagrams',
+    'Polarisation',
+  ],
+  'Food Technology & Health': [
+    'Eatwell Guide and Eight Tips for Healthy Living',
+    'Factors Affecting Food Choice',
+  ],
+  'English': [
+    'Poetry — Key Terminology and Concepts (Y8)',
+    'To Kill a Mockingbird — Key Terminology and Concepts',
+    'Creative Writing — Key Terminology and Concepts',
+    'Extended Creative Writing (inspired by TKAM)',
+  ],
+  Spanish: [
+    'Viva 2 — Module 1',
+    'Viva 2 — Module 2',
+    'Viva 2 — Module 3',
+    'Viva 2 — Module 4',
+  ],
+  Geography: [
+    'Coasts',
+    'Map Skills — OS and Atlas',
+    'Africa',
+    'Fieldwork',
+    'Glaciation',
+    'Polar Regions',
+    'Tectonics',
+    'Climate Change',
+  ],
+  History: [
+    'The Transatlantic Slave Trade',
+    'History of Warfare: Napoleonic Wars to WW1',
+  ],
+  'Religious Studies & Ethics': [
+    'Ethical Theories',
+    'Mindscapes — Key Concepts',
+  ],
+}
+
+const SUBJECTS = Object.keys(SUBJECT_TOPICS)
 
 export default function Home() {
   const [subject, setSubject] = useState('')
-  const [customSubject, setCustomSubject] = useState('')
   const [topic, setTopic] = useState('')
   const [count, setCount] = useState(10)
   const [loading, setLoading] = useState(false)
@@ -43,11 +75,14 @@ export default function Home() {
   const [generatedSubject, setGeneratedSubject] = useState('')
   const [generatedTopic, setGeneratedTopic] = useState('')
 
-  const activeSubject = subject === 'Other' ? customSubject : subject
+  const handleSubjectChange = (s: string) => {
+    setSubject(s)
+    setTopic('')
+  }
 
   const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!activeSubject.trim() || !topic.trim()) return
+    if (!subject.trim() || !topic.trim()) return
 
     setLoading(true)
     setError('')
@@ -56,7 +91,7 @@ export default function Home() {
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subject: activeSubject, topic, count }),
+        body: JSON.stringify({ subject, topic, count }),
       })
 
       const data = await res.json()
@@ -67,7 +102,7 @@ export default function Home() {
       }
 
       setFlashcards(data.flashcards)
-      setGeneratedSubject(activeSubject)
+      setGeneratedSubject(subject)
       setGeneratedTopic(topic)
     } catch {
       setError('Network error. Please check your connection and try again.')
@@ -94,9 +129,11 @@ export default function Home() {
     )
   }
 
+  const topics = subject ? SUBJECT_TOPICS[subject] : []
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-lg">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-600 shadow-lg mb-4">
             <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,7 +141,7 @@ export default function Home() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">GCSE Flashcards</h1>
-          <p className="text-gray-500 mt-2">Enter a subject and topic to generate revision flashcards</p>
+          <p className="text-gray-500 mt-2">Choose a subject and topic to generate revision flashcards</p>
         </div>
 
         <form onSubmit={handleGenerate} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4">
@@ -112,7 +149,7 @@ export default function Home() {
             <label className="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
             <select
               value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              onChange={(e) => handleSubjectChange(e.target.value)}
               className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition bg-white"
               required
             >
@@ -123,30 +160,20 @@ export default function Home() {
             </select>
           </div>
 
-          {subject === 'Other' && (
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Custom Subject</label>
-              <input
-                type="text"
-                value={customSubject}
-                onChange={(e) => setCustomSubject(e.target.value)}
-                placeholder="e.g. Media Studies"
-                className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
-                required
-              />
-            </div>
-          )}
-
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1.5">Topic</label>
-            <input
-              type="text"
+            <select
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              placeholder="e.g. Photosynthesis, The French Revolution, Quadratic Equations..."
-              className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition bg-white disabled:opacity-40"
               required
-            />
+              disabled={!subject}
+            >
+              <option value="" disabled>{subject ? 'Select a topic...' : 'Select a subject first'}</option>
+              {topics.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            </select>
           </div>
 
           <div>
@@ -181,7 +208,7 @@ export default function Home() {
 
           <button
             type="submit"
-            disabled={loading || !activeSubject.trim() || !topic.trim()}
+            disabled={loading || !subject || !topic}
             className="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition flex items-center justify-center gap-2 mt-1"
           >
             {loading ? (
@@ -199,7 +226,7 @@ export default function Home() {
         </form>
 
         <p className="text-center text-xs text-gray-400 mt-4">
-          Powered by Claude AI &middot; GCSE Level (UK)
+          Powered by Ollama AI &middot; GCSE Level (UK)
         </p>
       </div>
     </main>

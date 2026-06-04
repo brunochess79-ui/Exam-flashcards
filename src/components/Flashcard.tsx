@@ -13,26 +13,27 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
   const [flipped, setFlipped] = useState(false)
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 w-full">
       <p className="text-sm font-medium text-indigo-600">
         Card {index + 1} of {total}
       </p>
 
       <div
-        className="perspective-1000 w-full max-w-2xl cursor-pointer"
+        className="w-full cursor-pointer"
         style={{ perspective: '1000px' }}
         onClick={() => setFlipped((f) => !f)}
       >
         <div
-          className="relative w-full h-72 transition-transform duration-500"
+          className="relative w-full transition-transform duration-500"
           style={{
             transformStyle: 'preserve-3d',
             transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+            minHeight: '220px',
           }}
         >
           {/* Front */}
           <div
-            className="absolute inset-0 rounded-2xl bg-white border-2 border-indigo-200 shadow-lg flex flex-col items-center justify-center p-8 text-center"
+            className="absolute inset-0 rounded-2xl bg-white border-2 border-indigo-200 shadow-lg flex flex-col items-center justify-center p-10 text-center"
             style={{ backfaceVisibility: 'hidden' }}
           >
             <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-4">
@@ -44,7 +45,7 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
 
           {/* Back */}
           <div
-            className="absolute inset-0 rounded-2xl bg-indigo-600 shadow-lg flex flex-col items-center justify-center p-8 text-center"
+            className="absolute inset-0 rounded-2xl bg-indigo-600 shadow-lg flex flex-col items-center justify-center p-10 text-center"
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
