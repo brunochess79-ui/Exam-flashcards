@@ -1,7 +1,10 @@
-import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import { NextRequest, NextResponse } from 'next/server'
 
-const client = new Anthropic()
+const client = new OpenAI({
+  baseURL: 'https://api.ollama.com/v1',
+  apiKey: process.env.OLLAMA_API_KEY,
+})
 
 const SYSTEM_PROMPT = `You are an expert GCSE teacher generating flashcards for students at GCSE level (UK, ages 14-16).
 
@@ -29,11 +32,11 @@ export async function POST(req: NextRequest) {
 
   const cardCount = Math.min(Math.max(parseInt(count) || 10, 1), 30)
 
-  const message = await client.messages.create({
-    model: 'claude-haiku-4-5-20251001',
+  const response = await client.chat.completions.create({
+    model: 'llama3.1:cloud',
     max_tokens: 4096,
-    system: SYSTEM_PROMPT,
     messages: [
+      { role: 'system', content: SYSTEM_PROMPT },
       {
         role: 'user',
         content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate exactly ${cardCount} GCSE-level flashcards.`,
@@ -41,13 +44,9 @@ export async function POST(req: NextRequest) {
     ],
   })
 
-  const content = message.content[0]
-  if (content.type !== 'text') {
-    return NextResponse.json({ error: 'Unexpected response type' }, { status: 500 })
-  }
+  const text = response.choices[0]?.message?.content?.trim() ?? ''
 
   try {
-    const text = content.text.trim()
     const jsonStart = text.indexOf('[')
     const jsonEnd = text.lastIndexOf(']')
     if (jsonStart === -1 || jsonEnd === -1) {
