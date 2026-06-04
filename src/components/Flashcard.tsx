@@ -18,53 +18,24 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
         Card {index + 1} of {total}
       </p>
 
-      {/* Card container — grid stacking so both faces occupy same space and height is driven by content */}
       <div
-        className="w-full cursor-pointer"
-        style={{ perspective: '1200px' }}
         onClick={() => setFlipped((f) => !f)}
+        className={`w-full min-h-48 rounded-2xl shadow-lg cursor-pointer transition-colors duration-300 flex flex-col items-center justify-center p-10 text-center ${
+          flipped
+            ? 'bg-indigo-600 border-2 border-indigo-600'
+            : 'bg-white border-2 border-indigo-200'
+        }`}
       >
-        <div
-          className="w-full transition-transform duration-500"
-          style={{
-            transformStyle: 'preserve-3d',
-            transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            display: 'grid',
-          }}
-        >
-          {/* Front */}
-          <div
-            className="col-start-1 row-start-1 rounded-2xl bg-white border-2 border-indigo-200 shadow-lg flex flex-col items-center justify-center p-10 text-center"
-            style={{ backfaceVisibility: 'hidden', gridArea: '1 / 1' }}
-          >
-            <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-4">
-              Question
-            </span>
-            <p className="text-xl font-semibold text-gray-800 leading-relaxed">{question}</p>
-            <p className="mt-6 text-xs text-gray-400">Click to reveal answer</p>
-          </div>
-
-          {/* Back */}
-          <div
-            className="col-start-1 row-start-1 rounded-2xl bg-indigo-600 shadow-lg flex flex-col items-center justify-center p-10 text-center"
-            style={{
-              backfaceVisibility: 'hidden',
-              transform: 'rotateY(180deg)',
-              gridArea: '1 / 1',
-            }}
-          >
-            <span className="text-xs font-semibold uppercase tracking-widest text-indigo-200 mb-4">
-              Answer
-            </span>
-            <p className="text-lg font-medium text-white leading-relaxed">{answer}</p>
-            <p className="mt-6 text-xs text-indigo-300">Click to see question</p>
-          </div>
-        </div>
+        <span className={`text-xs font-semibold uppercase tracking-widest mb-4 ${flipped ? 'text-indigo-200' : 'text-indigo-400'}`}>
+          {flipped ? 'Answer' : 'Question'}
+        </span>
+        <p className={`text-xl font-semibold leading-relaxed ${flipped ? 'text-white' : 'text-gray-800'}`}>
+          {flipped ? answer : question}
+        </p>
+        <p className={`mt-6 text-xs ${flipped ? 'text-indigo-300' : 'text-gray-400'}`}>
+          {flipped ? 'Click to see question' : 'Click to reveal answer'}
+        </p>
       </div>
-
-      <p className="text-sm text-gray-400">
-        {flipped ? 'Showing answer' : 'Showing question'}
-      </p>
     </div>
   )
 }
