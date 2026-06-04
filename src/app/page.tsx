@@ -6,6 +6,7 @@ import FlashcardDeck from '@/components/FlashcardDeck'
 interface FlashcardData {
   question: string
   answer: string
+  hint: string
 }
 
 const SUBJECT_TOPICS: Record<string, string[]> = {

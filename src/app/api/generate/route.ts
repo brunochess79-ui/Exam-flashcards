@@ -11,10 +11,11 @@ const SYSTEM_PROMPT = `You are an expert GCSE teacher generating flashcards for 
 Each flashcard must have:
 - A clear, concise question on the front
 - An accurate, well-explained answer on the back (2-4 sentences max)
+- A short hint with an extra memory aid, exam tip, or common misconception to avoid (1-2 sentences)
 
 Return ONLY a valid JSON array with no other text, in this exact format:
 [
-  {"question": "...", "answer": "..."},
+  {"question": "...", "answer": "...", "hint": "..."},
   ...
 ]
 
