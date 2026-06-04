@@ -132,6 +132,158 @@ export const BUILT_IN_CONTEXT: Record<string, Record<string, string>> = {
 
     'Electronics — Thyristor, Polarisation': `GCSE topic: The function and purpose of a thyristor, and the concept of polarisation in electronic components.`,
   },
+  Spanish: {
+    'Viva 2 — Module 1': `Viva 2 Module 1 — Free Time (El tiempo libre)
+
+KEY VOCABULARY:
+Free time activities: escuchar música (to listen to music), ver la tele (to watch TV), jugar a los videojuegos (to play video games), salir con amigos (to go out with friends), leer (to read), hacer deporte (to do sport), ir al cine (to go to the cinema), chatear en línea (to chat online), navegar por internet (to browse the internet), tocar la guitarra (to play the guitar), bailar (to dance), dibujar (to draw), montar en bici (to ride a bike), ir de compras (to go shopping), cocinar (to cook)
+
+Sports: el fútbol (football), la natación (swimming), el tenis (tennis), el baloncesto (basketball), el atletismo (athletics), la gimnasia (gymnastics), el rugby (rugby), el ciclismo (cycling), el esquí (skiing)
+
+Music genres: la música pop (pop music), el rock (rock), el jazz (jazz), la música clásica (classical music), el reggaetón (reggaeton), la música electrónica (electronic music)
+
+OPINIONS:
+Me gusta / Me gustan (I like), No me gusta / No me gustan (I don't like), Me encanta / Me encantan (I love), Odio / Detesto (I hate), Prefiero (I prefer), Me interesa / Me interesan (I'm interested in), Me aburre / Me aburren (it bores me), Me parece + adjective (I find it...)
+
+Adjectives for opinions: divertido/a (fun), aburrido/a (boring), emocionante (exciting), relajante (relaxing), interesante (interesting), genial (great), horrible (horrible), estupendo/a (wonderful), fenomenal (brilliant)
+
+FREQUENCY ADVERBS:
+siempre (always), normalmente (normally/usually), a veces (sometimes), de vez en cuando (from time to time), los fines de semana (at weekends), todos los días (every day), casi nunca (almost never), nunca (never), una vez a la semana (once a week), dos veces a la semana (twice a week)
+
+PRESENT TENSE — regular verbs:
+-AR (escuchar): escucho, escuchas, escucha, escuchamos, escucháis, escuchan
+-ER (leer): leo, lees, lee, leemos, leéis, leen
+-IR (vivir): vivo, vives, vive, vivimos, vivís, viven
+
+KEY IRREGULAR VERBS (present tense):
+ir (to go): voy, vas, va, vamos, vais, van
+hacer (to do/make): hago, haces, hace, hacemos, hacéis, hacen
+ver (to see/watch): veo, ves, ve, vemos, veis, ven
+jugar (to play, game/sport): juego, juegas, juega, jugamos, jugáis, juegan — NOTE: jugar uses jugar + a + sport (juego al fútbol)
+tocar (to play, instrument): toco, tocas, toca, tocamos, tocáis, tocan — NOTE: tocar uses tocar + instrument (toco la guitarra)
+
+USEFUL PHRASES:
+¿Qué haces en tu tiempo libre? (What do you do in your free time?)
+¿Cuáles son tus pasatiempos? (What are your hobbies?)
+En mi tiempo libre... (In my free time...)
+Los fines de semana... (At weekends...)
+Cuando hace buen tiempo... (When the weather is good...)
+Cuando hace mal tiempo... (When the weather is bad...)`,
+
+    'Viva 2 — Module 2': `Viva 2 Module 2 — School (El insti / El colegio)
+
+KEY VOCABULARY — School subjects:
+el inglés (English), el español (Spanish), el francés (French), las matemáticas (maths), las ciencias (science), la biología (biology), la química (chemistry), la física (physics), la historia (history), la geografía (geography), el arte (art), la música (music), la educación física / el deporte (PE), la tecnología (technology/DT), la informática (computing/ICT), la religión (RE), el drama (drama), la economía (economics)
+
+Opinions on subjects:
+Mi asignatura favorita es... (My favourite subject is...)
+Se me da bien / Se me dan bien (I'm good at... — singular/plural)
+Se me da mal / Se me dan mal (I'm bad at... — singular/plural)
+Lo encuentro fácil / difícil (I find it easy / difficult)
+El/La profesor(a) de ... es muy bueno/a (The ... teacher is very good)
+Tenemos demasiados deberes (We have too much homework)
+
+School life vocabulary:
+el recreo (break time), la hora de comer (lunch time), el uniforme (uniform), los deberes (homework), un examen (an exam), las notas (grades/marks), el trimestre (term), la biblioteca (library), el laboratorio (laboratory), el patio (playground/yard), la cantina (canteen), el pasillo (corridor), la sala de profesores (staffroom)
+
+School rules: hay que (you have to), no se puede (you can't), está prohibido (it's forbidden), es obligatorio (it's compulsory), se permite (it's allowed)
+
+COMPARATIVES:
+más ... que (more ... than): El inglés es más interesante que la historia.
+menos ... que (less ... than): Las matemáticas son menos difíciles que la física.
+tan ... como (as ... as): El arte es tan creativo como la música.
+mejor que (better than), peor que (worse than)
+
+THE VERB "IR A" + INFINITIVE (near future):
+Voy a estudiar (I'm going to study), Vas a hacer (You're going to do), Va a ser (It's going to be)
+Esta tarde voy a hacer los deberes. (This afternoon I'm going to do my homework.)
+
+PRETERITE TENSE — regular verbs (completed past):
+-AR (estudiar): estudié, estudiaste, estudió, estudiamos, estudiasteis, estudiaron
+-ER (comer): comí, comiste, comió, comimos, comisteis, comieron
+-IR (salir): salí, saliste, salió, salimos, salisteis, salieron
+
+Irregular preterite (common):
+ir/ser: fui, fuiste, fue, fuimos, fuisteis, fueron (ir and ser are identical in preterite)
+hacer: hice, hiciste, hizo, hicimos, hicisteis, hicieron
+tener: tuve, tuviste, tuvo, tuvimos, tuvisteis, tuvieron`,
+
+    'Viva 2 — Module 3': `Viva 2 Module 3 — Health and Lifestyle (La salud y el estilo de vida)
+
+KEY VOCABULARY — Body parts:
+la cabeza (head), el pelo (hair), los ojos (eyes), la nariz (nose), la boca (mouth), los dientes (teeth), las orejas/los oídos (ears), el cuello (neck), los hombros (shoulders), el brazo (arm), la mano (hand), los dedos (fingers), el pecho (chest), el estómago (stomach), la espalda (back), la pierna (leg), la rodilla (knee), el pie (foot), los dedos del pie (toes)
+
+Health problems / illnesses:
+Me duele la cabeza. (My head hurts. / I have a headache.) — me duele + singular body part
+Me duelen los pies. (My feet hurt.) — me duelen + plural body part
+Tengo fiebre. (I have a temperature/fever.)
+Tengo tos. (I have a cough.)
+Tengo un resfriado. (I have a cold.)
+Estoy resfriado/a. (I have a cold.)
+Estoy enfermo/a. (I am ill.)
+Me encuentro mal. (I feel unwell.)
+Me he torcido el tobillo. (I have twisted my ankle.)
+Me he roto el brazo. (I have broken my arm.)
+
+Healthy lifestyle vocabulary:
+comer sano (to eat healthily), hacer ejercicio (to exercise), dormir bien (to sleep well), beber agua (to drink water), evitar el estrés (to avoid stress), no fumar (not to smoke), llevar una vida sana (to lead a healthy life), estar en forma (to be fit/in shape)
+
+Foods — healthy/unhealthy:
+las verduras (vegetables), la fruta (fruit), el pescado (fish), la carne (meat), los cereales (cereals/grains), los productos lácteos (dairy products), la comida basura (junk food), las grasas (fats), el azúcar (sugar), la sal (salt)
+
+REFLEXIVE VERBS:
+levantarse (to get up): me levanto, te levantas, se levanta, nos levantamos, os levantáis, se levantan
+ducharse (to shower), lavarse (to wash), vestirse (to get dressed), acostarse (to go to bed), despertarse (to wake up)
+NOTE: Reflexive pronouns (me, te, se, nos, os, se) go before the conjugated verb.
+
+MODAL VERBS:
+deber + infinitive (must/should): debo comer más fruta (I must eat more fruit)
+tener que + infinitive (have to): tengo que hacer más ejercicio (I have to do more exercise)
+poder + infinitive (can/be able to): puedo nadar todos los días (I can swim every day)
+querer + infinitive (want to): quiero ser más sano (I want to be healthier)
+
+poder conjugation: puedo, puedes, puede, podemos, podéis, pueden
+querer conjugation: quiero, quieres, quiere, queremos, queréis, quieren
+deber conjugation: debo, debes, debe, debemos, debéis, deben`,
+
+    'Viva 2 — Module 4': `Viva 2 Module 4 — Customs and Festivals (Las costumbres y las fiestas)
+
+KEY VOCABULARY — Festivals and celebrations:
+la Navidad (Christmas), la Nochebuena (Christmas Eve), la Nochevieja (New Year's Eve), el Año Nuevo (New Year), la Semana Santa (Easter/Holy Week), el Día de los Reyes Magos (Epiphany / 6th January — Three Kings Day), el Carnaval (Carnival), la Feria (fair/festival), las Fallas (Las Fallas festival — Valencia)
+
+Celebration vocabulary:
+celebrar (to celebrate), reunirse con la familia (to meet up with family), dar regalos (to give presents), recibir regalos (to receive presents), los fuegos artificiales (fireworks), el desfile (parade), el disfraz (costume/disguise), la tradición (tradition), la costumbre (custom), el festival (festival), la fiesta (party/festival/public holiday)
+
+Food and celebrations:
+las uvas (grapes) — eaten at midnight on New Year's Eve (12 grapes for 12 chimes)
+el turrón (nougat — traditional Christmas sweet), el roscón de Reyes (kings' cake — eaten on 6th January), los churros (churros — fried dough), la paella (paella)
+
+Family vocabulary:
+los parientes (relatives), los familiares (family members), reunirse (to get together), festejar (to celebrate), brindar (to toast/clink glasses), el brindis (toast)
+
+IMPERFECT TENSE — describing past habits/childhood:
+-AR (celebrar): celebraba, celebrabas, celebraba, celebrábamos, celebrabais, celebraban
+-ER (comer): comía, comías, comía, comíamos, comíais, comían
+-IR (vivir): vivía, vivías, vivía, vivíamos, vivíais, vivían
+
+Irregular imperfect (only 3):
+ser: era, eras, era, éramos, erais, eran
+ir: iba, ibas, iba, íbamos, ibais, iban
+ver: veía, veías, veía, veíamos, veíais, veían
+
+Imperfect usage: De niño/a... (As a child...), Cuando era pequeño/a... (When I was little...), Antes... (Before/In the past...), Cada año... (Every year...)
+
+CONTRAST: Preterite (specific completed event) vs Imperfect (ongoing habit/state):
+Ayer fui a la fiesta. (Yesterday I went to the party.) — preterite: specific event
+De pequeño, siempre iba a la fiesta. (As a child, I always used to go to the party.) — imperfect: habit
+
+CONDITIONAL TENSE (what you would do):
+Regular: infinitive + -ía, -ías, -ía, -íamos, -íais, -ían
+celebrar → celebraría (I would celebrate)
+comer → comería (I would eat)
+
+Common phrases: Me gustaría... (I would like to...), Sería (It would be), Podría (I could), Querría (I would want)`,
+  },
 }
 
 export function getBuiltInContext(subject: string, topic: string): string {
