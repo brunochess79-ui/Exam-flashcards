@@ -2,7 +2,7 @@ import OpenAI from 'openai'
 import { NextRequest, NextResponse } from 'next/server'
 
 const client = new OpenAI({
-  baseURL: 'https://api.ollama.com/v1',
+  baseURL: 'https://ollama.com/v1',
   apiKey: process.env.OLLAMA_API_KEY,
 })
 
@@ -30,36 +30,54 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  if (!process.env.OLLAMA_API_KEY) {
+    return NextResponse.json(
+      { error: 'OLLAMA_API_KEY is not configured on the server.' },
+      { status: 500 }
+    )
+  }
+
   const cardCount = Math.min(Math.max(parseInt(count) || 10, 1), 30)
 
-  const response = await client.chat.completions.create({
-    model: 'llama3.1:cloud',
-    max_tokens: 4096,
-    messages: [
-      { role: 'system', content: SYSTEM_PROMPT },
-      {
-        role: 'user',
-        content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate exactly ${cardCount} GCSE-level flashcards.`,
-      },
-    ],
-  })
-
-  const text = response.choices[0]?.message?.content?.trim() ?? ''
-
   try {
+    const response = await client.chat.completions.create({
+      model: 'llama3.1:cloud',
+      max_tokens: 4096,
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        {
+          role: 'user',
+          content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate exactly ${cardCount} GCSE-level flashcards.`,
+        },
+      ],
+    })
+
+    const text = response.choices[0]?.message?.content?.trim() ?? ''
     const jsonStart = text.indexOf('[')
     const jsonEnd = text.lastIndexOf(']')
+
     if (jsonStart === -1 || jsonEnd === -1) {
-      throw new Error('No JSON array found in response')
+      return NextResponse.json(
+        { error: 'AI returned an unexpected format. Please try again.' },
+        { status: 500 }
+      )
     }
+
     const flashcards = JSON.parse(text.slice(jsonStart, jsonEnd + 1))
+
     if (!Array.isArray(flashcards)) {
-      throw new Error('Response is not an array')
+      return NextResponse.json(
+        { error: 'AI returned an unexpected format. Please try again.' },
+        { status: 500 }
+      )
     }
+
     return NextResponse.json({ flashcards })
-  } catch {
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Unknown error'
+    console.error('Ollama API error:', message)
     return NextResponse.json(
-      { error: 'Failed to parse flashcards from AI response' },
+      { error: `Failed to generate flashcards: ${message}` },
       { status: 500 }
     )
   }
