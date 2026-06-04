@@ -5,11 +5,14 @@ import { useState } from 'react'
 interface FlashcardProps {
   question: string
   answer: string
+  hint: string
   index: number
   total: number
+  onKnow: () => void
+  onReview: () => void
 }
 
-export default function Flashcard({ question, answer, index, total }: FlashcardProps) {
+export default function Flashcard({ question, answer, hint, index, total, onKnow, onReview }: FlashcardProps) {
   const [flipped, setFlipped] = useState(false)
 
   return (
@@ -33,7 +36,7 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
             transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
           }}
         >
-          {/* ── Front face ── */}
+          {/* Front face */}
           <div
             className="absolute inset-0 flex flex-col items-center justify-center p-12 rounded-2xl text-center bg-white border-2 border-slate-200 shadow-xl"
             style={{ backfaceVisibility: 'hidden' }}
@@ -52,7 +55,7 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
             </span>
           </div>
 
-          {/* ── Back face ── */}
+          {/* Back face */}
           <div
             className="absolute inset-0 flex flex-col items-center justify-center p-12 rounded-2xl text-center shadow-xl"
             style={{
@@ -76,6 +79,34 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
           </div>
         </div>
       </div>
+
+      {/* Hint — shown after flip */}
+      {flipped && hint && (
+        <div className="w-full rounded-xl bg-amber-50 border border-amber-200 px-5 py-3 flex items-start gap-3">
+          <svg className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+          <p className="text-sm text-amber-800 leading-relaxed">{hint}</p>
+        </div>
+      )}
+
+      {/* Self-assessment buttons — shown after flip */}
+      {flipped && (
+        <div className="w-full flex gap-3 mt-1">
+          <button
+            onClick={(e) => { e.stopPropagation(); onReview() }}
+            className="flex-1 py-3 rounded-xl border-2 border-rose-200 bg-rose-50 text-rose-700 font-semibold text-sm hover:bg-rose-100 hover:border-rose-300 transition"
+          >
+            Need to review
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); onKnow() }}
+            className="flex-1 py-3 rounded-xl border-2 border-emerald-200 bg-emerald-50 text-emerald-700 font-semibold text-sm hover:bg-emerald-100 hover:border-emerald-300 transition"
+          >
+            Got it!
+          </button>
+        </div>
+      )}
     </div>
   )
 }

@@ -21,7 +21,7 @@ Return ONLY a valid JSON array with no other text, in this exact format:
 Make the questions test key GCSE knowledge, definitions, processes, and application. Vary the style: definitions, "explain why", "what is the effect of", etc.`
 
 export async function POST(req: NextRequest) {
-  const { subject, topic, count } = await req.json()
+  const { subject, topic, count, context, studentName } = await req.json()
 
   if (!subject?.trim() || !topic?.trim()) {
     return NextResponse.json(
@@ -38,6 +38,14 @@ export async function POST(req: NextRequest) {
   }
 
   const cardCount = Math.min(Math.max(parseInt(count) || 10, 1), 30)
+  const name = studentName?.trim() || ''
+
+  let userMessage = `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n`
+  if (name) userMessage += `Student name: ${name}\n`
+  if (context?.trim()) {
+    userMessage += `\nUse the following syllabus/study material to ensure the flashcards cover the exact content required:\n\n${context.trim()}\n`
+  }
+  userMessage += `\nGenerate exactly ${cardCount} GCSE-level flashcards.`
 
   try {
     const model = process.env.OLLAMA_MODEL || 'gemma3:12b'
@@ -46,10 +54,7 @@ export async function POST(req: NextRequest) {
       max_tokens: 4096,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
-        {
-          role: 'user',
-          content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate exactly ${cardCount} GCSE-level flashcards.`,
-        },
+        { role: 'user', content: userMessage },
       ],
     })
 

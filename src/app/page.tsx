@@ -2,10 +2,14 @@
 
 import { useState } from 'react'
 import FlashcardDeck from '@/components/FlashcardDeck'
+import DocumentLibrary from '@/components/DocumentLibrary'
+import { getBuiltInContext } from '@/lib/topicContext'
+import { getContextForTopic } from '@/lib/documents'
 
 interface FlashcardData {
   question: string
   answer: string
+  hint: string
 }
 
 const SUBJECT_TOPICS: Record<string, string[]> = {
@@ -84,11 +88,14 @@ export default function Home() {
   const [subject, setSubject] = useState('')
   const [topic, setTopic] = useState('')
   const [count, setCount] = useState(10)
+  const [studentName, setStudentName] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [flashcards, setFlashcards] = useState<FlashcardData[] | null>(null)
   const [generatedSubject, setGeneratedSubject] = useState('')
   const [generatedTopic, setGeneratedTopic] = useState('')
+  const [generatedName, setGeneratedName] = useState('')
+  const [docLibOpen, setDocLibOpen] = useState(false)
 
   const handleSubjectChange = (s: string) => {
     setSubject(s)
@@ -102,11 +109,15 @@ export default function Home() {
     setLoading(true)
     setError('')
 
+    const builtIn = getBuiltInContext(subject, topic)
+    const userDocs = getContextForTopic(subject)
+    const context = [builtIn, userDocs].filter(Boolean).join('\n\n')
+
     try {
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subject, topic, count }),
+        body: JSON.stringify({ subject, topic, count, context, studentName }),
       })
 
       const data = await res.json()
@@ -119,6 +130,7 @@ export default function Home() {
       setFlashcards(data.flashcards)
       setGeneratedSubject(subject)
       setGeneratedTopic(topic)
+      setGeneratedName(studentName)
     } catch {
       setError('Network error. Please check your connection and try again.')
     } finally {
@@ -138,6 +150,7 @@ export default function Home() {
           flashcards={flashcards}
           subject={generatedSubject}
           topic={generatedTopic}
+          studentName={generatedName}
           onReset={handleReset}
         />
       </main>
@@ -148,6 +161,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center px-4">
+      <DocumentLibrary open={docLibOpen} onClose={() => setDocLibOpen(false)} />
+
       <div className="w-full max-w-lg">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-600 shadow-lg mb-4">
@@ -160,6 +175,18 @@ export default function Home() {
         </div>
 
         <form onSubmit={handleGenerate} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4">
+          {/* Student name */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Your name <span className="text-gray-400 font-normal">(optional)</span></label>
+            <input
+              type="text"
+              value={studentName}
+              onChange={(e) => setStudentName(e.target.value)}
+              placeholder="e.g. Alex"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+            />
+          </div>
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
             <select
@@ -239,6 +266,17 @@ export default function Home() {
             )}
           </button>
         </form>
+
+        {/* Document library button */}
+        <button
+          onClick={() => setDocLibOpen(true)}
+          className="mt-3 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition shadow-sm"
+        >
+          <svg className="w-4 h-4 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+          Document Library
+        </button>
 
         <p className="text-center text-xs text-gray-400 mt-4">
           Powered by Ollama AI &middot; GCSE Level (UK)
