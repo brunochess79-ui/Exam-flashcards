@@ -13,10 +13,11 @@ interface FlashcardDeckProps {
   flashcards: FlashcardData[]
   subject: string
   topic: string
+  studentName?: string
   onReset: () => void
 }
 
-export default function FlashcardDeck({ flashcards, subject, topic, onReset }: FlashcardDeckProps) {
+export default function FlashcardDeck({ flashcards, subject, topic, studentName, onReset }: FlashcardDeckProps) {
   const [current, setCurrent] = useState(0)
   const [known, setKnown] = useState<Set<number>>(new Set())
   const [review, setReview] = useState<Set<number>>(new Set())
@@ -48,7 +49,6 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
   const fetchFeedback = async () => {
     setLoadingFeedback(true)
     const reviewQuestions = Array.from(review).map(i => flashcards[i].question)
-    // include current card in review count if not yet answered
     try {
       const res = await fetch('/api/feedback', {
         method: 'POST',
@@ -58,6 +58,7 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
           topic,
           totalCards: flashcards.length,
           reviewCards: reviewQuestions,
+          studentName,
         }),
       })
       const data = await res.json()
@@ -85,7 +86,9 @@ export default function FlashcardDeck({ flashcards, subject, topic, onReset }: F
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-slate-800">Session Complete!</h2>
+          <h2 className="text-3xl font-bold text-slate-800">
+            {studentName ? `Well done, ${studentName}!` : 'Session Complete!'}
+          </h2>
           <p className="text-slate-500 mt-1">{topic} &mdash; {subject}</p>
         </div>
 

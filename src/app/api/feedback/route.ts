@@ -7,11 +7,12 @@ const client = new OpenAI({
 })
 
 export async function POST(req: NextRequest) {
-  const { subject, topic, totalCards, reviewCards } = await req.json()
+  const { subject, topic, totalCards, reviewCards, studentName } = await req.json()
 
   const model = process.env.OLLAMA_MODEL || 'gemma3:12b'
   const score = totalCards - reviewCards.length
   const percent = Math.round((score / totalCards) * 100)
+  const nameGreeting = studentName?.trim() ? `The student's name is ${studentName.trim()}. Address them by name throughout.` : ''
 
   try {
     const response = await client.chat.completions.create({
@@ -20,7 +21,7 @@ export async function POST(req: NextRequest) {
       messages: [
         {
           role: 'system',
-          content: `You are an encouraging GCSE tutor giving personalised end-of-session feedback to a student. Be warm, specific, and motivating. Keep it concise — 3 short paragraphs max.`,
+          content: `You are an encouraging GCSE tutor giving personalised end-of-session feedback to a student. Be warm, specific, and motivating. Keep it concise — 3 short paragraphs max. ${nameGreeting}`,
         },
         {
           role: 'user',
