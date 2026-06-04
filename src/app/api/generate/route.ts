@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const client = new Anthropic()
 
-const SYSTEM_PROMPT = `You are an expert GCSE teacher. Generate exactly 10 flashcards for the given subject and topic at GCSE level (UK, ages 14-16).
+const SYSTEM_PROMPT = `You are an expert GCSE teacher generating flashcards for students at GCSE level (UK, ages 14-16).
 
 Each flashcard must have:
 - A clear, concise question on the front
@@ -18,7 +18,7 @@ Return ONLY a valid JSON array with no other text, in this exact format:
 Make the questions test key GCSE knowledge, definitions, processes, and application. Vary the style: definitions, "explain why", "what is the effect of", etc.`
 
 export async function POST(req: NextRequest) {
-  const { subject, topic } = await req.json()
+  const { subject, topic, count } = await req.json()
 
   if (!subject?.trim() || !topic?.trim()) {
     return NextResponse.json(
@@ -27,14 +27,16 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  const cardCount = Math.min(Math.max(parseInt(count) || 10, 1), 30)
+
   const message = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
-    max_tokens: 2048,
+    max_tokens: 4096,
     system: SYSTEM_PROMPT,
     messages: [
       {
         role: 'user',
-        content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate 10 GCSE-level flashcards.`,
+        content: `Subject: ${subject.trim()}\nTopic: ${topic.trim()}\n\nGenerate exactly ${cardCount} GCSE-level flashcards.`,
       },
     ],
   })

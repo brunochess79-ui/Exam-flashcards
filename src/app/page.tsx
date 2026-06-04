@@ -36,6 +36,7 @@ export default function Home() {
   const [subject, setSubject] = useState('')
   const [customSubject, setCustomSubject] = useState('')
   const [topic, setTopic] = useState('')
+  const [count, setCount] = useState(10)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [flashcards, setFlashcards] = useState<FlashcardData[] | null>(null)
@@ -55,7 +56,7 @@ export default function Home() {
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subject: activeSubject, topic }),
+        body: JSON.stringify({ subject: activeSubject, topic, count }),
       })
 
       const data = await res.json()
@@ -103,7 +104,7 @@ export default function Home() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">GCSE Flashcards</h1>
-          <p className="text-gray-500 mt-2">Enter a subject and topic to generate 10 revision flashcards</p>
+          <p className="text-gray-500 mt-2">Enter a subject and topic to generate revision flashcards</p>
         </div>
 
         <form onSubmit={handleGenerate} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col gap-4">
@@ -146,6 +147,30 @@ export default function Home() {
               className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
               required
             />
+          </div>
+
+          <div>
+            <div className="flex justify-between items-center mb-1.5">
+              <label className="text-sm font-medium text-gray-700">Number of flashcards</label>
+              <span className="text-sm font-semibold text-indigo-600 tabular-nums w-6 text-right">{count}</span>
+            </div>
+            <input
+              type="range"
+              min={5}
+              max={30}
+              step={5}
+              value={count}
+              onChange={(e) => setCount(Number(e.target.value))}
+              className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-indigo-600 bg-gray-200"
+            />
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+              <span>5</span>
+              <span>10</span>
+              <span>15</span>
+              <span>20</span>
+              <span>25</span>
+              <span>30</span>
+            </div>
           </div>
 
           {error && (
