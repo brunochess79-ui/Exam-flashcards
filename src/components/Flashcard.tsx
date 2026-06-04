@@ -18,23 +18,24 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
         Card {index + 1} of {total}
       </p>
 
+      {/* Card container — grid stacking so both faces occupy same space and height is driven by content */}
       <div
         className="w-full cursor-pointer"
-        style={{ perspective: '1000px' }}
+        style={{ perspective: '1200px' }}
         onClick={() => setFlipped((f) => !f)}
       >
         <div
-          className="relative w-full transition-transform duration-500"
+          className="w-full transition-transform duration-500"
           style={{
             transformStyle: 'preserve-3d',
             transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-            minHeight: '220px',
+            display: 'grid',
           }}
         >
           {/* Front */}
           <div
-            className="absolute inset-0 rounded-2xl bg-white border-2 border-indigo-200 shadow-lg flex flex-col items-center justify-center p-10 text-center"
-            style={{ backfaceVisibility: 'hidden' }}
+            className="col-start-1 row-start-1 rounded-2xl bg-white border-2 border-indigo-200 shadow-lg flex flex-col items-center justify-center p-10 text-center"
+            style={{ backfaceVisibility: 'hidden', gridArea: '1 / 1' }}
           >
             <span className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-4">
               Question
@@ -45,10 +46,11 @@ export default function Flashcard({ question, answer, index, total }: FlashcardP
 
           {/* Back */}
           <div
-            className="absolute inset-0 rounded-2xl bg-indigo-600 shadow-lg flex flex-col items-center justify-center p-10 text-center"
+            className="col-start-1 row-start-1 rounded-2xl bg-indigo-600 shadow-lg flex flex-col items-center justify-center p-10 text-center"
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
+              gridArea: '1 / 1',
             }}
           >
             <span className="text-xs font-semibold uppercase tracking-widest text-indigo-200 mb-4">
