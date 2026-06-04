@@ -40,8 +40,9 @@ export async function POST(req: NextRequest) {
   const cardCount = Math.min(Math.max(parseInt(count) || 10, 1), 30)
 
   try {
+    const model = process.env.OLLAMA_MODEL || 'llama3.2:cloud'
     const response = await client.chat.completions.create({
-      model: 'llama3.1:cloud',
+      model,
       max_tokens: 4096,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
