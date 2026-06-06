@@ -132,6 +132,242 @@ export const BUILT_IN_CONTEXT: Record<string, Record<string, string>> = {
 
     'Electronics — Thyristor, Polarisation': `GCSE topic: The function and purpose of a thyristor, and the concept of polarisation in electronic components.`,
   },
+  Geography: {
+    Coasts: `GCSE Geography — Coasts
+
+WAVE PROCESSES:
+- Hydraulic action: force of water compresses air in cracks, breaking rock apart
+- Abrasion/corrasion: rocks carried by waves grind and wear away the cliff face
+- Attrition: rocks carried by waves knock together and break into smaller, smoother pieces
+- Solution/corrosion: slightly acidic seawater dissolves soluble minerals in rock (e.g. limestone, chalk)
+
+TRANSPORTATION:
+- Longshore drift: waves approach at an angle (driven by prevailing wind), swash carries sediment up the beach at that angle, backwash carries it straight back down — net movement of sediment along the coast
+- Traction (large boulders rolled), saltation (pebbles bounced), suspension (fine sand/silt carried in water), solution (dissolved minerals)
+
+EROSIONAL LANDFORMS (sequence):
+Headlands and bays → cliffs and wave-cut platforms → caves (wave attack on weakness) → arches (cave breaks through headland) → stacks (arch roof collapses) → stumps (stack eroded to sea level)
+
+DEPOSITIONAL LANDFORMS:
+- Beach: sediment deposited where energy decreases; sandy (low energy) or pebble (high energy)
+- Spit: beach extended as longshore drift deposits sediment past a change in coastline direction; end curves due to secondary winds; e.g. Spurn Head, Yorkshire
+- Bar: spit that grows across a bay, enclosing a lagoon
+- Tombolo: spit connects mainland to an island
+
+FACTORS AFFECTING EROSION: rock type (hard vs soft), wave energy/fetch, weather, human activity
+
+COASTAL MANAGEMENT:
+Hard engineering: sea walls (reflect waves, expensive), groynes (trap sediment, interrupt longshore drift), rock armour/rip-rap (absorb wave energy), revetments
+Soft engineering: beach nourishment (add sand/pebbles — natural appearance, needs repeating), managed retreat (allow flooding, cheaper, habitat creation), dune stabilisation (plant marram grass)`,
+
+    'Map Skills — OS and Atlas': `GCSE Geography — Map Skills
+
+OS MAPS:
+- Grid references: 4-figure (identifies a 1 km grid square — read ALONG the corridor then UP the stairs); 6-figure (identifies an exact point within a square — divide each square into tenths)
+- Contour lines: join points of equal height; close together = steep slope; far apart = gentle slope; circles = hill/depression
+- Relief: shape and height of the land shown by contour lines and spot heights
+- Scale: e.g. 1:50,000 means 1 cm on map = 50,000 cm (500 m) in real life; 1:25,000 means 1 cm = 250 m
+- Common OS symbols: church with tower/spire, campsite, picnic area, youth hostel, motorway, A-road, footpath, railway, woodland, marsh
+
+ATLAS SKILLS:
+- Latitude: horizontal lines (parallels); 0° = Equator; increases N and S to 90°
+- Longitude: vertical lines (meridians); 0° = Prime Meridian (Greenwich); increases E and W to 180°
+- Compass: 8 points (N, NE, E, SE, S, SW, W, NW); bearings measured clockwise from north (0°/360°)
+- Map types: physical (relief, rivers), political (countries, borders), thematic (climate, population density, land use)
+
+CROSS-SECTIONS: plot height from contour lines at each grid line to show the shape of the land in profile
+
+DISTANCE: measure with ruler or string on map, then multiply by scale denominator`,
+
+    Africa: `GCSE Geography — Africa
+
+PHYSICAL GEOGRAPHY:
+- Sahara Desert: world's largest hot desert (N Africa); extreme temperatures, low rainfall (<250 mm/yr)
+- Sahel: semi-arid zone south of Sahara; prone to drought and desertification
+- Congo Basin: world's second-largest tropical rainforest; high biodiversity
+- Great Rift Valley: tectonic feature running N-S through E Africa; forms lakes (e.g. Lake Victoria, Lake Tanganyika)
+- Major rivers: Nile (longest in world, flows N to Mediterranean), Congo, Niger, Zambezi (Victoria Falls)
+- Highest peak: Mount Kilimanjaro (Tanzania), 5,895 m
+
+CLIMATE ZONES: equatorial (hot, wet all year — Congo), tropical savanna (wet/dry seasons — sub-Saharan), hot desert (Sahara), Mediterranean (N Africa coast), highland (E Africa)
+
+POPULATION AND URBANISATION: Africa has the fastest-growing population; rapid urbanisation — Lagos, Cairo, Kinshasa are megacities; rural-urban migration driven by push (drought, poverty) and pull (jobs, services) factors
+
+DEVELOPMENT:
+- Many African countries are LICs (Low Income Countries) or NEEs
+- Causes of slow development: legacy of colonialism, debt, unfair trade, conflict, disease (malaria, HIV/AIDS), political instability, climate hazards
+- Indicators: HDI, GNI per capita, life expectancy, literacy rate, infant mortality
+- Positive developments: mobile phone technology leapfrogging infrastructure, microfinance, growing economies (Ghana, Ethiopia, South Africa)
+
+CASE STUDIES typically used: Ethiopia (LIC development), Ghana (NEE/resources), Kenya (tourism), South Africa (inequality)`,
+
+    Fieldwork: `GCSE Geography — Fieldwork
+
+THE GEOGRAPHICAL ENQUIRY PROCESS:
+1. Identify a question/hypothesis to investigate
+2. Collect data (primary and secondary)
+3. Present data using appropriate methods
+4. Analyse and describe patterns/trends
+5. Draw conclusions — does evidence support the hypothesis?
+6. Evaluate the method — limitations, reliability, improvements
+
+PRIMARY DATA (collected by you):
+- Environmental quality surveys, land use surveys, pedestrian/traffic counts
+- Bi-polar surveys (rating environment +2 to -2)
+- Interviews and questionnaires
+- Measurements: river width/depth/velocity, beach profile, soil pH, noise levels
+
+SECONDARY DATA (collected by others):
+- OS maps, aerial photographs, satellite images
+- Census data, government statistics
+- Weather records, historical data, GIS
+
+SAMPLING METHODS:
+- Random: every location has equal chance of selection (avoids bias)
+- Systematic: regular intervals (e.g. every 10 m)
+- Stratified: sample proportional to sub-groups in population
+
+DATA PRESENTATION: bar graphs, line graphs, scatter graphs, pie charts, choropleth maps, isoline maps, flow maps, annotated photographs, field sketches, proportional symbols
+
+EVALUATION TERMS: reliability (would you get same results if repeated?), validity (does the method measure what you intended?), anomalies (results that do not fit the pattern), sample size (larger = more reliable)`,
+
+    Glaciation: `GCSE Geography — Glaciation
+
+GLACIER TYPES: valley/alpine glaciers (flow down mountain valleys), ice sheets (continental scale, e.g. Antarctica, Greenland), ice caps (dome-shaped, smaller than ice sheets)
+
+GLACIAL BUDGET:
+- Accumulation: inputs to glacier (snowfall, avalanches)
+- Ablation: outputs from glacier (melting, evaporation, calving of icebergs)
+- Equilibrium line: where accumulation = ablation; above = zone of accumulation; below = zone of ablation
+- Positive budget: glacier advances; negative budget: glacier retreats
+
+WEATHERING PROCESS:
+- Freeze-thaw (frost shattering): water enters cracks in rock, freezes and expands by ~9%, widens crack; repeated cycles break off fragments (scree)
+
+GLACIAL EROSION PROCESSES:
+- Abrasion: debris embedded in the base of the glacier scrapes and scratches the bedrock, producing striations (scratches) and rock flour
+- Plucking/quarrying: meltwater refreezes in joints of bedrock, glacier pulls away chunks of rock as it moves
+
+EROSIONAL LANDFORMS:
+- Corrie/cirque: armchair-shaped hollow in a mountainside; formed by rotational slip of ice; may contain a tarn (lake) after ice melts; e.g. Red Tarn, Lake District
+- Arête: knife-edge ridge formed between two corries eroding back-to-back
+- Pyramidal peak/horn: sharp pointed summit formed where 3+ corries cut back; e.g. the Matterhorn
+- Glacial trough (U-shaped valley): deep, steep-sided, flat-floored valley; carved by a valley glacier widening and deepening a former V-shaped river valley
+- Hanging valley: tributary glacier had less erosive power; its valley is left perched high above the main trough floor, often with a waterfall
+- Truncated spurs: interlocking spurs of a river valley are cut off by the glacier, leaving blunt cliff faces
+- Ribbon lake: long, narrow lake in a glacial trough, occupying an over-deepened section; e.g. Windermere
+
+GLACIAL TRANSPORTATION AND DEPOSITION:
+- Till: unsorted mixture of clay, sand and boulders deposited directly by the glacier (no size sorting)
+- Moraine types: lateral moraine (debris along the side of a glacier), medial moraine (two lateral moraines merge where tributary joins main glacier), terminal moraine (ridge of debris dumped at the glacier's snout marking its furthest advance), ground moraine (sheet of till deposited beneath the glacier)
+- Erratics: boulders transported far from their source rock and deposited when ice melts; e.g. the Norber erratics, Yorkshire
+- Drumlins: smooth, egg-shaped hills of till; long axis parallel to ice flow direction; blunt end faces direction ice came from`,
+
+    'Polar Regions': `GCSE Geography — Polar Regions
+
+THE ARCTIC vs ANTARCTICA:
+- Arctic: ocean surrounded by land (Greenland, northern Russia, Canada, Norway); sea ice (frozen ocean); no penguins; polar bears live here; not a continent; no permanent human residents (Indigenous people live on surrounding coasts)
+- Antarctica: continent surrounded by ocean; covered in ice sheet up to 4.7 km thick; no polar bears; penguins live here; governed by Antarctic Treaty (1959) — no military activity, no mining, international scientific cooperation
+
+CLIMATE:
+- Extremely cold: Antarctica averages −49°C inland; Arctic averages −34°C in winter
+- Low precipitation (polar deserts): <200 mm/year
+- 24-hour daylight in summer (midnight sun) and polar night in winter
+- Permafrost: permanently frozen ground in Arctic tundra regions
+
+ECOSYSTEMS:
+- Arctic: tundra biome — mosses, lichens, sedges, dwarf shrubs; Arctic fox, caribou/reindeer, polar bear, walrus, Arctic hare, snowy owl; food chain: algae → krill → fish → seals → polar bears
+- Antarctic: very limited land species; rich ocean ecosystem — krill are keystone species; penguins, seals, whales, albatross
+
+HUMAN ACTIVITY:
+- Research: 70+ research stations in Antarctica (British Antarctic Survey at Halley and Rothera)
+- Oil and gas: drilling in Arctic (e.g. Alaska, Siberia) — controversial due to spill risks
+- Tourism: growing in both regions; strict regulations in Antarctica
+- Indigenous peoples: Inuit, Sámi, and other groups live in Arctic regions
+
+CLIMATE CHANGE IMPACTS:
+- Arctic sea ice extent declining (~13% per decade)
+- Greenland and Antarctic ice sheets losing mass → sea level rise
+- Permafrost thawing → methane release (positive feedback loop)
+- Ecosystem disruption: polar bears losing sea ice hunting platforms; penguin habitat changes
+- Opening of Arctic shipping routes (Northwest Passage)`,
+
+    Tectonics: `GCSE Geography — Tectonics
+
+STRUCTURE OF THE EARTH:
+- Inner core: solid iron and nickel; ~5,100–6,370 km depth; very high temperature and pressure
+- Outer core: liquid iron and nickel; generates Earth's magnetic field
+- Mantle: semi-molten rock (magma); convection currents in mantle drive plate movement
+- Crust: oceanic (thin ~6 km, dense, basalt) and continental (thick ~35 km, less dense, granite)
+
+TECTONIC PLATES AND MOVEMENT:
+- Lithosphere (crust + upper mantle) is broken into ~12 major plates
+- Driven by convection currents: hot magma rises, spreads, cools, sinks — drags plates
+- Average movement: 2–5 cm per year
+
+PLATE BOUNDARIES:
+- Constructive (divergent): plates move apart; magma rises to fill gap; new oceanic crust formed; gentle volcanic eruptions; shallow earthquakes; e.g. Mid-Atlantic Ridge; Iceland sits on this boundary
+- Destructive (convergent): plates move together; denser oceanic plate subducts under continental plate; deep ocean trench forms; violent earthquakes and explosive volcanoes; e.g. Pacific Ring of Fire, Andes mountains, Japan
+- Collision: two continental plates collide; neither subducts (similar density); fold mountains form; e.g. Himalayas (Eurasian + Indian plates)
+- Conservative (transform): plates slide past each other; no crust created or destroyed; no volcanic activity; powerful earthquakes; e.g. San Andreas Fault (California)
+
+EARTHQUAKES:
+- Focus: point underground where earthquake originates; epicentre: point on surface above focus
+- Seismic waves: P-waves (compress/expand rock), S-waves (move rock side to side)
+- Measured by: Richter scale (magnitude, logarithmic) or moment magnitude scale; Mercalli scale (intensity/effects)
+- Primary effects: buildings collapse, roads destroyed, pipes burst, deaths
+- Secondary effects: fires, landslides, tsunamis, disease outbreaks, economic damage
+
+VOLCANOES:
+- Shield volcano: gentle slopes; runny (low-viscosity) basaltic lava; non-explosive; constructive margins; e.g. Mauna Loa, Hawaii (hotspot)
+- Composite/stratovolcano: steep cone; thick (high-viscosity) andesitic lava; explosive; pyroclastic flows, ash clouds; destructive margins; e.g. Mount Fuji, Mount Etna
+
+HOTSPOTS: volcanic activity in middle of a plate above a mantle plume; e.g. Hawaiian Islands
+
+TSUNAMI: triggered by undersea earthquake/volcanic eruption; wave travels fast across ocean (800 km/h), height increases as it reaches shallow water; e.g. 2004 Indian Ocean tsunami, 2011 Tōhoku tsunami (Japan)`,
+
+    'Climate Change': `GCSE Geography — Climate Change
+
+EVIDENCE FOR CLIMATE CHANGE:
+- Temperature records: global average surface temperature risen ~1.1°C since pre-industrial times
+- Ice cores: trapped air bubbles show past CO2 levels and temperatures going back 800,000 years
+- Sea level rise: ~20 cm rise since 1900; thermal expansion of oceans + ice melt
+- Retreat of glaciers worldwide (e.g. Alps, Himalayas)
+- Changes in seasons: earlier flowering, bird migration shifts
+
+NATURAL CAUSES:
+- Milankovitch cycles: changes in Earth's orbit (eccentricity), axial tilt and wobble (precession) over thousands of years
+- Solar output variations: sunspot cycles affect energy reaching Earth
+- Volcanic eruptions: emit CO2 (warming) and sulphur dioxide/ash particles (short-term cooling by reflecting sunlight)
+
+HUMAN CAUSES (enhanced greenhouse effect):
+- Burning fossil fuels (coal, oil, gas): releases CO2
+- Deforestation: trees absorb CO2; burning/decomposing releases stored carbon
+- Agriculture: methane (CH4) from cattle and rice paddies; nitrous oxide (N2O) from fertilisers
+- Industry and cement production: CO2 emissions
+- Greenhouse gases trap outgoing infrared radiation → atmosphere warms
+
+EFFECTS OF CLIMATE CHANGE:
+- Melting ice sheets and glaciers → sea level rise → coastal flooding (e.g. Bangladesh, Pacific islands)
+- More frequent and intense extreme weather: droughts, floods, hurricanes
+- Ocean warming and acidification → coral bleaching (e.g. Great Barrier Reef), disrupted food chains
+- Species extinction and habitat loss; disrupted ecosystems
+- Reduced crop yields in some regions (food insecurity)
+- Human health impacts: spread of disease (malaria), heat stress
+
+MITIGATION (reducing the cause):
+- Renewable energy (solar, wind, hydroelectric, tidal) replacing fossil fuels
+- Carbon capture and storage (CCS)
+- Reforestation/afforestation
+- Energy efficiency measures; electric vehicles
+- International agreements: Kyoto Protocol, Paris Agreement (2015) — limit warming to 1.5°C above pre-industrial levels; COP summits
+
+ADAPTATION (managing the impacts):
+- Sea defences (sea walls, managed retreat, flood barriers)
+- Drought-resistant GM crops; changing farming practices
+- Early warning systems for extreme weather
+- Protecting biodiversity corridors`,
+  },
   Spanish: {
     'Viva 2 — Module 1': `Viva 2 Module 1 — Free Time (El tiempo libre)
 
