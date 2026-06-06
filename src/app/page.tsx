@@ -344,18 +344,22 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="flex justify-between items-center mb-1.5">
-                <label className="text-sm font-medium text-gray-700">Number of flashcards</label>
-                <span className="text-sm font-semibold text-indigo-600 tabular-nums w-6 text-right">{count}</span>
-              </div>
+              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                {selectedTopics.length > 1 ? 'Flashcards per topic' : 'Number of flashcards'}
+              </label>
               <input
-                type="range" min={5} max={30} step={5} value={count}
-                onChange={(e) => setCount(Number(e.target.value))}
-                className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-indigo-600 bg-gray-200"
+                type="number"
+                min={1}
+                max={30}
+                value={count}
+                onChange={(e) => setCount(Math.min(30, Math.max(1, Number(e.target.value))))}
+                className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
               />
-              <div className="flex justify-between text-xs text-gray-400 mt-1">
-                {[5, 10, 15, 20, 25, 30].map(n => <span key={n}>{n}</span>)}
-              </div>
+              {selectedTopics.length > 1 && (
+                <p className="text-xs text-indigo-600 mt-1.5 font-medium">
+                  {count * selectedTopics.length} total flashcards across {selectedTopics.length} topics
+                </p>
+              )}
             </div>
 
             {error && (
