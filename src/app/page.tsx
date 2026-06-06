@@ -101,8 +101,13 @@ export default function Home() {
 
   // Shared
   const [subject, setSubject] = useState('')
-  const [topic, setTopic] = useState('')
   const [studentName, setStudentName] = useState('')
+
+  // Flashcard mode — multi-topic
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([])
+
+  // Exam mode — single topic
+  const [topic, setTopic] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [docLibOpen, setDocLibOpen] = useState(false)
@@ -125,15 +130,23 @@ export default function Home() {
   const handleSubjectChange = (s: string) => {
     setSubject(s)
     setTopic('')
+    setSelectedTopics([])
   }
 
   const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!subject.trim() || !topic.trim()) return
+    if (!subject.trim() || selectedTopics.length === 0) return
     setLoading(true)
     setError('')
 
-    const builtIn = getBuiltInContext(subject, topic)
+    const topicStr = selectedTopics.join(', ')
+    const builtIn = selectedTopics
+      .map(t => {
+        const ctx = getBuiltInContext(subject, t)
+        return ctx ? `[${t}]\n${ctx}` : ''
+      })
+      .filter(Boolean)
+      .join('\n\n')
     const userDocs = getContextForTopic(subject)
     const context = [builtIn, userDocs].filter(Boolean).join('\n\n')
 
@@ -141,13 +154,13 @@ export default function Home() {
       const res = await fetch('/api/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ subject, topic, count, context, studentName }),
+        body: JSON.stringify({ subject, topic: topicStr, count, context, studentName }),
       })
       const data = await res.json()
       if (!res.ok) { setError(data.error || 'Something went wrong.'); return }
       setFlashcards(data.flashcards)
       setGeneratedSubject(subject)
-      setGeneratedTopic(topic)
+      setGeneratedTopic(topicStr)
       setGeneratedName(studentName)
     } catch {
       setError('Network error. Please check your connection and try again.')
@@ -283,17 +296,51 @@ export default function Home() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">Topic</label>
-              <select
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition bg-white disabled:opacity-40"
-                required
-                disabled={!subject}
-              >
-                <option value="" disabled>{subject ? 'Select a topic...' : 'Select a subject first'}</option>
-                {topics.map((t) => <option key={t} value={t}>{t}</option>)}
-              </select>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="block text-sm font-medium text-gray-700">
+                  Topics <span className="text-gray-400 font-normal">(pick one or more)</span>
+                </label>
+                {subject && topics.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setSelectedTopics(selectedTopics.length === topics.length ? [] : [...topics])}
+                    className="text-xs text-indigo-600 hover:text-indigo-700 font-medium transition"
+                  >
+                    {selectedTopics.length === topics.length ? 'Deselect all' : 'Select all'}
+                  </button>
+                )}
+              </div>
+              <div className={`border border-gray-200 rounded-lg overflow-hidden ${!subject ? 'opacity-40' : ''}`}>
+                {!subject ? (
+                  <p className="text-sm text-gray-400 px-3 py-3">Select a subject first</p>
+                ) : (
+                  <div className="max-h-48 overflow-y-auto divide-y divide-gray-50">
+                    {topics.map((t) => (
+                      <label
+                        key={t}
+                        className="flex items-center gap-3 px-3 py-2.5 hover:bg-gray-50 cursor-pointer transition"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedTopics.includes(t)}
+                          onChange={(e) =>
+                            setSelectedTopics(prev =>
+                              e.target.checked ? [...prev, t] : prev.filter(x => x !== t)
+                            )
+                          }
+                          className="w-4 h-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 shrink-0"
+                        />
+                        <span className="text-sm text-gray-700 leading-snug">{t}</span>
+                      </label>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {selectedTopics.length > 0 && (
+                <p className="text-xs text-indigo-600 mt-1.5 font-medium">
+                  {selectedTopics.length} topic{selectedTopics.length !== 1 ? 's' : ''} selected
+                </p>
+              )}
             </div>
 
             <div>
@@ -317,7 +364,7 @@ export default function Home() {
 
             <button
               type="submit"
-              disabled={loading || !subject || !topic}
+              disabled={loading || !subject || selectedTopics.length === 0}
               className="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition flex items-center justify-center gap-2 mt-1"
             >
               {loading ? (
