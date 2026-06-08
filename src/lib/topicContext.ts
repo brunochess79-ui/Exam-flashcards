@@ -1,141 +1,729 @@
 export const BUILT_IN_CONTEXT: Record<string, Record<string, string>> = {
   Biology: {
-    'Cells, Organelles and Microscopy': `GCSE Biology — Cells, Organelles and Microscopy
+    'Characteristics of Living Things': `Biology — Characteristics of Living Things
 
-CELL TYPES:
-- Prokaryotic cells (e.g. bacteria): no nucleus; DNA free in cytoplasm; smaller; no membrane-bound organelles; may have plasmids, flagella, cell wall (not cellulose)
-- Eukaryotic cells (e.g. animal, plant, fungal): have a nucleus containing DNA
+MRS NERG — the seven characteristics of all living things:
+- Movement: all living things move (even plants move slowly, e.g. toward light)
+- Respiration: release of energy from food (glucose); occurs in ALL living cells
+- Sensitivity: ability to detect and respond to changes in the environment (stimuli)
+- Nutrition: taking in food/nutrients for energy, growth and repair
+- Excretion: removal of waste products made by the organism's own chemical reactions (e.g. CO₂, urea) — NOT just egestion (passing out undigested food)
+- Reproduction: producing offspring (sexual or asexual)
+- Growth: permanent increase in size/mass
 
-ANIMAL CELL ORGANELLES:
-- Nucleus: contains DNA/genetic material; controls cell activities
-- Cell membrane: controls what enters and leaves the cell (partially permeable)
-- Cytoplasm: jelly-like fluid where chemical reactions take place
-- Mitochondria: site of aerobic respiration; produce ATP (energy)
+CELLS are the basic unit of life. All living organisms are made of cells.
+
+VIRUSES: not considered fully living — they cannot respire, grow or reproduce on their own; they need a host cell
+
+DISTINGUISHING LIVING FROM NON-LIVING:
+- A living thing must show ALL seven characteristics at some point in its life cycle
+- Exceptions/edge cases: seeds (not actively growing/moving but still alive); fire (moves, 'feeds', grows but does not reproduce or have cells)`,
+
+    'Habitats and Adaptations': `Biology — Habitats and Adaptations
+
+KEY TERMS:
+- Habitat: the place where an organism lives (e.g. a pond, a forest floor, a desert)
+- Population: all the individuals of one species in a habitat
+- Community: all the populations of different species living in a habitat
+- Ecosystem: a community of living organisms together with their non-living environment
+- Niche: the role an organism plays in its ecosystem (what it eats, what eats it, where it lives)
+
+ADAPTATIONS: features that make an organism well suited to its environment; increases chance of survival and reproduction
+Three types:
+1. Structural (anatomical): physical features of the body
+2. Behavioural: actions the organism takes
+3. Physiological: internal chemical or biological processes
+
+EXAMPLES:
+Arctic/cold environments:
+- Polar bear: thick fur and fat layer (insulation), white fur (camouflage), large paws (spread weight on ice), small ears (reduce heat loss)
+- Penguins: huddle together (behavioural), waterproof feathers, blubber layer
+
+Hot/dry environments (desert):
+- Camel: fatty hump (energy store — not water), can tolerate body temperature fluctuations, concentrated urine, slit nostrils
+- Cactus: thick stem stores water, spines instead of leaves (reduce water loss/surface area), deep/wide roots, waxy coating
+
+Deep sea: bioluminescence, large eyes (detect dim light), pressure-resistant bodies
+
+EXTREMOPHILES: organisms adapted to extreme conditions (very hot, very salty, very acidic); e.g. bacteria in volcanic vents (thermophiles)
+
+DISTRIBUTION OF ORGANISMS: affected by biotic factors (living — competition, predation, disease) and abiotic factors (non-living — temperature, light, water, pH, oxygen levels)`,
+
+    'Organs and Systems': `Biology — Organs and Systems
+
+LEVELS OF ORGANISATION (smallest to largest):
+Cell → Tissue → Organ → Organ System → Organism
+
+- Cell: basic unit of life; carries out life processes
+- Tissue: group of similar cells working together (e.g. muscle tissue, nervous tissue)
+- Organ: structure made of different tissues working together for a specific function (e.g. the heart, stomach, leaf)
+- Organ system: group of organs working together (e.g. digestive system, circulatory system)
+
+MAJOR HUMAN ORGAN SYSTEMS:
+- Digestive system: mouth, oesophagus, stomach, small intestine, large intestine, liver, pancreas — breaks down food and absorbs nutrients
+- Circulatory system: heart, blood vessels, blood — transports substances around the body
+- Respiratory system: lungs, trachea, bronchi, diaphragm — gas exchange (O₂ in, CO₂ out)
+- Nervous system: brain, spinal cord, nerves — detects stimuli and coordinates responses
+- Musculoskeletal system: bones, muscles, tendons, ligaments — support and movement
+- Reproductive system: produces gametes; supports reproduction
+- Excretory system: kidneys, lungs, skin — removes metabolic waste
+
+PLANT ORGAN SYSTEMS:
+- Shoot system: stem, leaves, flowers — photosynthesis, reproduction, gas exchange
+- Root system: roots — absorbs water and minerals, anchors plant`,
+
+    'Cells': `Biology — Cells
+
+ANIMAL CELL PARTS:
+- Nucleus: contains DNA; controls cell activities
+- Cell membrane: controls what enters and leaves (partially permeable)
+- Cytoplasm: jelly-like fluid; site of chemical reactions
+- Mitochondria: site of aerobic respiration; produce energy (ATP)
 - Ribosomes: site of protein synthesis
 
-PLANT CELL (additional organelles):
-- Cell wall: made of cellulose; gives structural support and shape
-- Chloroplasts: contain chlorophyll; site of photosynthesis; have own DNA and ribosomes
-- Vacuole: large, filled with cell sap; maintains turgor pressure (keeps plant firm)
+PLANT CELL (additional parts):
+- Cell wall: made of cellulose; rigid; gives shape and support
+- Chloroplasts: contain chlorophyll; site of photosynthesis; green colour
+- Vacuole: large, central; filled with cell sap; maintains turgor pressure (keeps plant firm/upright)
 
-SPECIALISED CELLS:
-- Red blood cells: no nucleus (more space for haemoglobin); biconcave disc (large surface area); carries oxygen
-- Sperm cell: long tail (flagellum) for swimming; many mitochondria; acrosome contains enzymes to penetrate egg
-- Nerve cell (neuron): long axon for fast signal transmission; myelin sheath for insulation; dendrites receive signals
-- Muscle cells: contain myofibrils; many mitochondria for ATP production
-- Root hair cells: large surface area projection; no chloroplasts; absorbs water (osmosis) and minerals (active transport)
-- Palisade mesophyll cells: packed with chloroplasts; near leaf surface for maximum light absorption
+COMPARING ANIMAL AND PLANT CELLS:
+Animal cells: no cell wall, no chloroplasts, no large central vacuole; irregular shape
+Plant cells: have cell wall, chloroplasts (in green parts), large central vacuole; regular, box-like shape
 
 MICROSCOPY:
-- Light microscope: max magnification ~1,500×; resolution ~200 nm; can view living cells; uses visible light
-- Electron microscope: max magnification ~1,000,000×; resolution ~0.2 nm; must use dead/fixed specimens; uses electron beams; reveals ultrastructure (mitochondria, ribosomes, ER)
-- Magnification formula: magnification = image size ÷ actual size
-- Staining: dyes (e.g. iodine, methylene blue) used to make structures visible under light microscope
-- Cell fractionation: cells broken open by homogenisation; organelles separated by centrifugation at different speeds`,
+- Light microscope: uses visible light; magnification up to ~1,500×; can view living cells; resolution ~200 nm
+- Electron microscope: uses electron beam; magnification up to ~1,000,000×; much higher resolution (~0.2 nm); specimens must be dead/fixed; reveals fine detail (mitochondria, ribosomes)
+- Magnification = image size ÷ actual size
+- Staining: dyes (e.g. iodine, methylene blue) make structures visible
 
-    'Breathing and Respiration': `GCSE Biology — Breathing and Respiration
+UNICELLULAR vs MULTICELLULAR:
+- Unicellular: entire organism is a single cell; e.g. Amoeba, Paramecium, bacteria
+- Multicellular: made of many cells; cells can specialise for different functions`,
 
-AEROBIC RESPIRATION (with oxygen):
-glucose + oxygen → carbon dioxide + water (+ energy/ATP)
-6CO₂H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O
-- Occurs in mitochondria; produces ~36–38 ATP per glucose molecule
-- Used for: movement, growth, maintaining body temperature, active transport
+    'Specialised Cells': `Biology — Specialised Cells
 
-ANAEROBIC RESPIRATION (without oxygen):
-- In animals/humans: glucose → lactic acid (+ small amount of ATP)
-  Causes muscle fatigue and pain; creates oxygen debt (lactic acid converted back to glucose in liver when O₂ available)
-- In plants and yeast (fermentation): glucose → ethanol + carbon dioxide (+ small amount of ATP)
-  Used in brewing and bread-making
+Cells become specialised (differentiated) to carry out specific functions — their structure is adapted to their job.
 
-BREATHING (VENTILATION) — moving air in and out of lungs:
-Inhalation: diaphragm contracts (flattens), external intercostal muscles contract → ribcage moves up and out → lung volume increases → air pressure inside falls below atmospheric → air rushes in
-Exhalation: diaphragm relaxes (domes upward), intercostal muscles relax → ribcage moves down and in → lung volume decreases → pressure rises → air pushed out
+RED BLOOD CELLS:
+- No nucleus → more space for haemoglobin (carries O₂)
+- Biconcave disc shape → large surface area for O₂ absorption and release
+- Flexible → can squeeze through narrow capillaries
 
-STRUCTURE OF THE RESPIRATORY SYSTEM:
-Nose/mouth → trachea (supported by cartilage rings) → bronchi → bronchioles → alveoli
+SPERM CELL:
+- Long tail (flagellum) → propels it toward the egg
+- Many mitochondria → energy for swimming
+- Acrosome (enzyme store) at head → digests through the egg's outer layer
 
-GAS EXCHANGE IN ALVEOLI:
-- Huge surface area (~70 m² total)
-- Very thin walls (one cell thick — short diffusion distance)
-- Moist surface (gases dissolve)
-- Rich blood supply (steep concentration gradient maintained)
-- O₂ diffuses: alveoli → blood; CO₂ diffuses: blood → alveoli
+EGG CELL (OVUM):
+- Very large → contains nutrients (food store) for early embryo development
+- Jelly coat → changes after fertilisation to prevent more sperm entering
 
-LUNG CAPACITY TERMS:
-- Tidal volume: volume of air breathed in/out in one normal breath (~0.5 L)
-- Vital capacity: maximum volume that can be breathed in one breath (~4.5–5 L)
-- Residual volume: air remaining in lungs after maximum exhalation`,
+NERVE CELL (NEURON):
+- Long axon → transmits electrical signals over long distances quickly
+- Myelin sheath → insulates the axon; speeds up signal transmission
+- Many dendrites → receives signals from many other neurons
 
-    'Variation and Inheritance': `GCSE Biology — Variation and Inheritance
+MUSCLE CELL:
+- Contains myofibrils (protein fibres) → contracts to produce movement
+- Many mitochondria → large ATP supply for contraction
 
-TYPES OF VARIATION:
-- Continuous: range of values between extremes (e.g. height, mass, skin colour); controlled by multiple genes and environment; shown on histogram/line graph
-- Discontinuous: distinct categories (e.g. ABO blood group, tongue rolling, attached/free earlobes, sex); controlled by one or few genes; shown on bar chart
+ROOT HAIR CELL:
+- Long hair-like extension → greatly increases surface area for absorbing water (by osmosis) and mineral ions (by active transport)
+- No chloroplasts → underground, no light for photosynthesis
+- Large vacuole → maintains osmotic gradient
 
-CAUSES: genetic variation (mutations, sexual reproduction shuffles alleles), environmental variation, or both
+PALISADE MESOPHYLL CELL (in leaves):
+- Packed with chloroplasts → maximises light absorption for photosynthesis
+- Located near top of leaf → receives most light
 
-DNA AND CHROMOSOMES:
-- DNA: double helix; made of nucleotides (phosphate + deoxyribose sugar + nitrogenous base)
-- Base pairing: A–T, C–G (complementary base pairing)
-- Gene: a section of DNA that codes for a specific sequence of amino acids (making a protein)
-- Chromosomes: humans have 46 (23 pairs); found in nucleus; made of tightly coiled DNA
-- Sex chromosomes: XX = female; XY = male
+GUARD CELLS:
+- Surround stomata; change shape to open/close the pore
+- Control gas exchange (CO₂ in, O₂ out) and water loss (transpiration)
+- Contain chloroplasts`,
 
-ALLELES AND INHERITANCE:
-- Allele: a different version/form of a gene
-- Dominant allele: expressed when one or two copies present (capital letter, e.g. B)
-- Recessive allele: only expressed when two copies present (lowercase, e.g. b)
-- Homozygous: two identical alleles (BB or bb); Heterozygous: two different alleles (Bb)
-- Genotype: allele combination (e.g. Bb); Phenotype: observable characteristic expressed (e.g. brown eyes)
-- Punnett square: grid used to predict offspring genotype and phenotype ratios
+    'Photosynthesis': `Biology — Photosynthesis
 
-INHERITED DISORDERS:
-- Cystic fibrosis: autosomal recessive (bb); thick sticky mucus in lungs and digestive system; both parents must be carriers
-- Huntington's disease: autosomal dominant (Hh or HH); progressive nervous system degeneration; only one copy needed
+WORD EQUATION:
+carbon dioxide + water → glucose + oxygen (light energy required)
 
-CELL DIVISION:
-- Mitosis: produces 2 genetically identical diploid (2n) daughter cells; for growth, repair, asexual reproduction; stages: IPMAT (Interphase, Prophase, Metaphase, Anaphase, Telophase)
-- Meiosis: produces 4 genetically unique haploid (n) gametes (sex cells); occurs in gonads; involves two divisions; genetic variation through crossing over and independent assortment`,
-
-    'Photosynthesis and Plant Reproduction': `GCSE Biology — Photosynthesis and Plant Reproduction
-
-PHOTOSYNTHESIS:
-carbon dioxide + water → glucose + oxygen (using light energy)
+SYMBOL EQUATION:
 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂
-- Site: chloroplasts (contain chlorophyll — green pigment absorbing red and blue light, reflecting green)
-- Light-dependent reactions: occur in thylakoid membranes; split water; produce ATP and NADPH
-- Light-independent reactions (Calvin cycle): occur in stroma; use CO₂ to produce glucose
 
-LIMITING FACTORS (factors that slow rate of photosynthesis when in short supply):
-- Light intensity: more light → faster rate, up to a point
-- CO₂ concentration: more CO₂ → faster rate, up to a point
-- Temperature: higher temperature → faster rate (up to optimum ~25°C), then enzymes denature
+WHERE: chloroplasts (contain chlorophyll — green pigment that absorbs light energy, mainly red and blue wavelengths; reflects green)
+
+USES OF GLUCOSE PRODUCED:
+- Respiration (energy release)
+- Stored as starch (insoluble storage — in seeds, roots, tubers)
+- Made into cellulose (cell walls)
+- Combined with nitrates → amino acids → proteins
+- Converted to oils/fats (stored in seeds)
+
+LIMITING FACTORS — factors that slow the rate of photosynthesis when in short supply:
+- Light intensity: rate increases as light increases (up to a maximum)
+- CO₂ concentration: rate increases as CO₂ increases (up to a maximum)
+- Temperature: rate increases as temperature rises (up to ~25–30°C optimum), then falls sharply as enzymes denature
 
 LEAF ADAPTATIONS FOR PHOTOSYNTHESIS:
-- Large, flat surface area (maximise light absorption)
-- Thin (short diffusion distance for gases)
-- Chloroplasts concentrated in palisade mesophyll layer (near top surface)
-- Stomata on lower surface (gas exchange: CO₂ in, O₂ out; water vapour out)
-- Veins: xylem brings water; phloem transports glucose (as sucrose)
+- Large, flat surface → maximises light absorption
+- Thin → short diffusion distance for gases and light
+- Chloroplasts in palisade layer (top) → maximum light
+- Stomata on lower surface → gas exchange; guard cells control opening
+- Veins (xylem brings water; phloem carries glucose away)
+- Waxy cuticle → reduces water loss
 
-USES OF GLUCOSE IN PLANTS:
-- Respiration (energy)
-- Converted to starch for storage (in seeds, roots, tubers)
-- Cellulose for cell walls
-- Combined with nitrates to make amino acids and proteins
-- Converted to oils/fats for seeds
+TESTING FOR STARCH (evidence of photosynthesis): add iodine solution — turns blue-black in presence of starch`,
 
-PLANT REPRODUCTION:
-Sexual reproduction (flowers):
-- Male: stamen = anther (produces pollen/male gametes) + filament
-- Female: carpel = stigma (receives pollen) + style + ovary + ovule (contains egg)
-- Pollination: transfer of pollen from anther to stigma; insect-pollinated (large colourful petals, scent, nectar, sticky pollen) vs wind-pollinated (small/no petals, feathery stigmas, light dusty pollen)
-- Fertilisation: pollen tube grows down style; male gamete fuses with ovule → seed; ovary wall → fruit
-- Seed dispersal: wind (wings, parachutes), animal (hooks, fleshy fruits), water, self-dispersal (explosive pods)
+    'Gaining Water and Nutrients': `Biology — Gaining Water and Nutrients
 
-Asexual reproduction (cloning): no fertilisation; genetically identical offspring (clones)
-- Natural: runners (strawberry), bulbs (tulip), tubers (potato)
-- Artificial: cuttings, tissue culture (micropropagation)`,
+OSMOSIS:
+- Definition: the net movement of water molecules from a region of HIGH water concentration (dilute solution) to a region of LOW water concentration (concentrated solution) through a partially permeable membrane
+- Water moves DOWN its concentration gradient (no energy required — passive)
+- Turgor pressure: water entering plant cells by osmosis pushes against cell wall → keeps plant firm/upright; wilting occurs when plants lose water
+
+ACTIVE TRANSPORT:
+- Movement of substances from LOW concentration to HIGH concentration (against the concentration gradient)
+- Requires ENERGY (ATP from respiration)
+- Used by: root hair cells to absorb mineral ions (e.g. nitrates, magnesium) from soil; intestinal cells to absorb glucose from gut
+
+ROOT HAIR CELLS:
+- Long extension increases surface area → absorbs water by osmosis; absorbs minerals by active transport
+- Soil water has higher water concentration than root cell cytoplasm → water moves in by osmosis
+
+TRANSPIRATION:
+- Loss of water vapour from leaves through stomata
+- Water travels from roots → stem → leaves through xylem vessels (transpiration stream)
+- Factors increasing transpiration rate: higher temperature, lower humidity, higher wind speed, more light (stomata open wider)
+- Adaptations to reduce water loss: waxy cuticle, fewer/smaller stomata, stomata on lower surface, rolled leaves (xerophytes)
+
+MINERAL IONS NEEDED BY PLANTS:
+- Nitrates (NO₃⁻): needed to make amino acids and proteins → deficiency causes stunted growth and yellow leaves
+- Magnesium (Mg²⁺): needed to make chlorophyll → deficiency causes yellowing of leaves (chlorosis)`,
+
+    'Human Food and Diet': `Biology — Human Food and Diet
+
+SEVEN NUTRIENT GROUPS:
+1. Carbohydrates: main energy source; simple (sugars — glucose, fructose, sucrose) and complex (starch, glycogen, cellulose/fibre); found in bread, pasta, rice, potatoes, fruit
+2. Proteins: growth, repair and enzyme production; made of amino acids; sources: meat, fish, eggs, beans, nuts, dairy
+3. Fats (lipids): energy storage, insulation, cell membranes, absorption of fat-soluble vitamins; saturated (animal sources) vs unsaturated (plant/fish sources); sources: butter, oil, nuts, oily fish
+4. Vitamins: needed in small amounts for specific functions; e.g. Vitamin C (immune system, collagen — deficiency = scurvy); Vitamin D (calcium absorption, bone health — deficiency = rickets); Vitamin A (eyesight — deficiency = night blindness)
+5. Minerals: e.g. Calcium (bones and teeth); Iron (haemoglobin in red blood cells — deficiency = anaemia); Iodine (thyroid hormones)
+6. Water: transport of dissolved substances, chemical reactions, temperature regulation
+7. Fibre (roughage): aids digestive movement (peristalsis); prevents constipation; indigestible plant material
+
+FOOD TESTS:
+- Starch: iodine solution → blue-black (positive)
+- Glucose (reducing sugar): Benedict's solution + heat → brick-red/orange precipitate (positive)
+- Protein: Biuret reagent → purple/violet (positive)
+- Fat: ethanol emulsion test → cloudy white emulsion (positive)
+
+A BALANCED DIET: the correct amounts of each nutrient for an individual's needs
+Affected by: age, sex, level of physical activity, pregnancy, medical conditions
+
+ENERGY BALANCE:
+- Energy intake (food) > energy used → weight gain
+- Energy intake < energy used → weight loss
+- BMI = mass (kg) ÷ height² (m²); 18.5–24.9 = healthy weight
+
+DEFICIENCY DISEASES: scurvy (Vitamin C), rickets (Vitamin D), anaemia (iron), night blindness (Vitamin A), kwashiorkor (protein deficiency)`,
+
+    'Digestion': `Biology — Digestion
+
+PURPOSE: break down large, insoluble food molecules into small, soluble molecules that can be absorbed into the blood
+
+TWO TYPES OF DIGESTION:
+- Mechanical digestion: physical breakdown of food (chewing by teeth, churning by stomach muscles) — increases surface area for enzymes
+- Chemical digestion: enzymes break chemical bonds in large molecules
+
+THE DIGESTIVE SYSTEM — ORGANS AND FUNCTIONS:
+- Mouth: teeth chew food (mechanical); salivary glands produce saliva containing amylase (breaks starch → sugars)
+- Oesophagus: muscular tube; peristalsis moves food to stomach
+- Stomach: churns food; produces gastric juice (contains protease enzymes and hydrochloric acid — kills bacteria, provides optimum pH for stomach enzymes)
+- Small intestine: main site of chemical digestion and absorption; receives bile and pancreatic juice
+- Pancreas: produces pancreatic juice containing amylase (starch), protease (protein), lipase (fat)
+- Liver: produces bile (stored in gall bladder); bile emulsifies fats (breaks fat into small droplets, increasing surface area for lipase)
+- Large intestine: absorbs water from undigested material; produces faeces
+- Rectum and anus: stores and expels faeces
+
+DIGESTIVE ENZYMES:
+- Amylase: breaks starch → maltose (a sugar); made in salivary glands and pancreas; works in mouth and small intestine
+- Protease (e.g. pepsin): breaks proteins → amino acids; made in stomach and pancreas
+- Lipase: breaks fats (lipids) → fatty acids + glycerol; made in pancreas; works in small intestine
+
+ABSORPTION:
+- Occurs in the small intestine; villi (finger-like projections) increase surface area enormously
+- Villi features: large surface area, thin walls (one cell thick — short diffusion distance), good blood supply (capillaries), lacteal (absorbs fatty acids)
+- Glucose and amino acids → into blood capillaries → portal vein → liver
+- Fatty acids and glycerol → into lacteals → lymphatic system → blood`,
+
+    'Respiration': `Biology — Respiration
+
+RESPIRATION is the process of releasing energy from glucose in all living cells. It is NOT the same as breathing.
+
+AEROBIC RESPIRATION (with oxygen):
+Word equation: glucose + oxygen → carbon dioxide + water (+ energy released as ATP)
+Symbol equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O
+- Occurs in the mitochondria
+- Releases much more energy per glucose molecule than anaerobic (~36–38 ATP)
+- Energy used for: movement (muscle contraction), active transport, maintaining body temperature, growth and repair
+
+ANAEROBIC RESPIRATION (without oxygen):
+In animals/humans: glucose → lactic acid (+ small amount of ATP)
+- Occurs during intense exercise when O₂ cannot be delivered fast enough
+- Lactic acid builds up → causes muscle fatigue and pain (the 'burn')
+- Oxygen debt: extra oxygen needed after exercise to break down lactic acid (converted back to glucose in the liver)
+
+In yeast/plants (fermentation): glucose → ethanol + carbon dioxide (+ small amount of ATP)
+- Used in brewing (alcohol production) and baking (CO₂ makes bread rise)
+
+COMPARING AEROBIC AND ANAEROBIC:
+- Both start with glucose and release energy
+- Aerobic: needs O₂; more energy released; products = CO₂ + H₂O; occurs in mitochondria
+- Anaerobic: no O₂; less energy released; products = lactic acid (animals) or ethanol + CO₂ (yeast/plants)
+
+EVIDENCE OF RESPIRATION:
+- CO₂ produced (turns limewater cloudy)
+- Heat produced
+- O₂ consumed`,
+
+    'Breathing': `Biology — Breathing
+
+BREATHING (VENTILATION) is the mechanism of moving air in and out of the lungs. It is NOT the same as respiration.
+
+THE RESPIRATORY SYSTEM:
+Nose/mouth → trachea (supported by rings of cartilage) → bronchi (left and right) → bronchioles → alveoli
+
+MECHANISM OF BREATHING:
+Inhalation (breathing in):
+- Diaphragm contracts → flattens from dome shape
+- External intercostal muscles contract → ribcage moves UP and OUT
+- Volume of chest cavity INCREASES → pressure DECREASES below atmospheric
+- Air rushes INTO lungs
+
+Exhalation (breathing out):
+- Diaphragm relaxes → returns to dome shape
+- Intercostal muscles relax → ribcage moves DOWN and IN
+- Volume of chest cavity DECREASES → pressure INCREASES above atmospheric
+- Air pushed OUT of lungs
+
+GAS EXCHANGE IN ALVEOLI:
+- Oxygen: diffuses from alveoli (high concentration) → blood capillaries (low concentration)
+- Carbon dioxide: diffuses from blood (high concentration) → alveoli (low concentration)
+Alveolar adaptations for efficient gas exchange:
+- Huge total surface area (~70 m²)
+- Very thin walls (one cell thick) → short diffusion distance
+- Moist lining → gases dissolve first
+- Rich blood supply (dense capillary network) → steep concentration gradient maintained
+
+DIFFERENCES IN INHALED AND EXHALED AIR:
+- Exhaled air has more CO₂, less O₂, same nitrogen, more water vapour, slightly warmer
+- Oxygen: 21% inhaled → ~16% exhaled; CO₂: 0.04% inhaled → 4% exhaled
+
+LUNG VOLUMES:
+- Tidal volume: air breathed in/out during normal quiet breathing (~0.5 L)
+- Vital capacity: maximum air that can be breathed in one breath (~4.5–5 L)`,
+
+    'Blood and Circulation': `Biology — Blood and Circulation
+
+THE HEART:
+- Located in the chest, slightly left of centre; surrounded by the pericardium
+- Four chambers: right atrium, right ventricle, left atrium, left ventricle
+- Valves prevent backflow: atrioventricular valves (between atria and ventricles), semilunar valves (at exits of ventricles)
+- Left ventricle has thicker, more muscular walls → pumps blood to entire body (higher pressure needed); right ventricle pumps to lungs only
+
+DOUBLE CIRCULATORY SYSTEM:
+- Circuit 1 (pulmonary): right side of heart → lungs (for gas exchange) → left side of heart
+- Circuit 2 (systemic): left side of heart → body (all organs and tissues) → right side of heart
+- Advantage: blood can be re-oxygenated at the lungs before being pumped around the body at high pressure
+
+BLOOD VESSELS:
+- Arteries: carry blood AWAY from heart; thick muscular and elastic walls (withstand high pressure); small lumen; no valves
+- Veins: carry blood TOWARD heart; thinner walls; large lumen; valves to prevent backflow; blood at lower pressure
+- Capillaries: tiny; walls one cell thick (short diffusion distance); huge network through tissues; site of exchange of substances
+
+COMPONENTS OF BLOOD:
+- Red blood cells (erythrocytes): carry oxygen (haemoglobin); no nucleus; biconcave shape; 45% of blood volume
+- White blood cells (leucocytes): fight infection; two main types: phagocytes (engulf pathogens) and lymphocytes (produce antibodies)
+- Platelets (thrombocytes): tiny cell fragments; clot blood at wounds (prevent blood loss and entry of pathogens)
+- Plasma: pale yellow liquid (~55% of blood); transports: CO₂, glucose, amino acids, urea, hormones, heat, antibodies
+
+PULSE: rhythmic stretching of artery walls caused by heartbeat; can be felt at wrist (radial), neck (carotid); resting pulse rate ~60–100 bpm`,
+
+    'Skeletons and Movement': `Biology — Skeletons and Movement
+
+FUNCTIONS OF THE SKELETON:
+- Support: maintains body shape and posture
+- Protection: protects organs (e.g. skull protects brain; ribcage protects heart and lungs)
+- Movement: bones act as levers; muscles attached by tendons
+- Blood cell production: red and white blood cells made in bone marrow
+- Mineral storage: calcium and phosphorus stored in bones
+
+TYPES OF SKELETON:
+- Endoskeleton: internal skeleton (humans, all vertebrates); can grow with organism
+- Exoskeleton: external skeleton (insects, crustaceans); does not grow — organism must moult
+- Hydrostatic skeleton: fluid-filled cavity provides support (worms, jellyfish)
+
+JOINTS: where two bones meet
+- Fixed/immovable joints: skull sutures
+- Hinge joints: allow movement in ONE plane (flexion and extension); e.g. knee, elbow
+- Ball-and-socket joints: allow movement in ALL planes (full rotation); e.g. shoulder, hip
+
+SYNOVIAL JOINT STRUCTURE:
+- Cartilage: smooth, covers bone ends; reduces friction and absorbs shock
+- Synovial fluid: lubricates the joint
+- Synovial membrane: produces synovial fluid
+- Ligaments: connect bone to bone; hold joint together; slightly elastic
+- Tendons: connect muscle to bone; inelastic (tough)
+
+ANTAGONISTIC MUSCLE PAIRS:
+- Muscles can only PULL (contract), not push
+- Muscles work in pairs: when one contracts (shortens), the other relaxes (lengthens)
+- Example — biceps and triceps at the elbow:
+  - Biceps contracts → arm bends (flexion); triceps relaxes
+  - Triceps contracts → arm straightens (extension); biceps relaxes`,
+
+    'Responses and Behaviour': `Biology — Responses and Behaviour
+
+KEY TERMS:
+- Stimulus: a change in the environment that is detected (e.g. light, sound, heat, chemicals)
+- Receptor: detects the stimulus (e.g. eye detects light, skin detects temperature)
+- Response: the action taken in reply to the stimulus
+- Effector: the organ/structure that carries out the response (muscle or gland)
+
+THE NERVOUS SYSTEM:
+- Central nervous system (CNS): brain and spinal cord — processes information and coordinates responses
+- Peripheral nervous system (PNS): all nerves connecting CNS to rest of body
+
+TYPES OF NEURONE (nerve cell):
+- Sensory neurone: carries impulses FROM receptor TO CNS
+- Relay neurone: within the CNS; connects sensory to motor neurones; processes information
+- Motor neurone: carries impulses FROM CNS TO effector (muscle/gland)
+
+REFLEX ARC:
+Stimulus → receptor → sensory neurone → relay neurone (in spinal cord) → motor neurone → effector → response
+- Reflex actions are FAST, AUTOMATIC and INVOLUNTARY (do not involve conscious thought)
+- Examples: blinking, withdrawing hand from heat, pupil dilation/constriction, knee-jerk reflex
+- Purpose: protect the body from harm quickly
+
+SYNAPSES:
+- Gap between neurones
+- Electrical impulse reaches the synapse → chemical neurotransmitter released → crosses gap → binds to receptors on next neurone → new electrical impulse generated
+- Allows signals to travel in ONE direction only
+
+BEHAVIOUR:
+- Innate behaviour: automatic, inherited, does not need to be learned; same for all individuals of a species (e.g. reflexes, hatching from egg)
+- Learned behaviour: changed through experience; allows adaptation to new situations (e.g. habituation, conditioning, trial and error, insight)`,
+
+    'Hormones': `Biology — Hormones
+
+HORMONES: chemical messengers produced by endocrine glands; released directly into the blood; travel to target organs; slower but longer-lasting effects than nervous system
+
+KEY ENDOCRINE GLANDS AND HORMONES:
+- Pituitary gland (brain): 'master gland'; produces FSH, LH, ADH, growth hormone
+- Thyroid gland (neck): thyroxine — regulates metabolic rate; needs iodine
+- Adrenal glands (above kidneys): adrenaline — 'fight or flight' hormone
+- Pancreas: insulin and glucagon — blood glucose regulation
+- Ovaries: oestrogen and progesterone — female reproductive hormones
+- Testes: testosterone — male reproductive hormone; sperm production
+
+BLOOD GLUCOSE REGULATION (negative feedback):
+- After a meal: blood glucose RISES → pancreas releases INSULIN → cells take up glucose; liver converts glucose to glycogen (glycogenesis) → blood glucose falls back to normal
+- Between meals / during exercise: blood glucose FALLS → pancreas releases GLUCAGON → liver converts glycogen back to glucose (glycogenolysis) → blood glucose rises back to normal
+- Diabetes Type 1: pancreas cannot produce insulin; managed with insulin injections
+- Diabetes Type 2: body cells become resistant to insulin; managed with diet and exercise
+
+ADRENALINE ('fight or flight'):
+Produced in stressful situations; causes: increased heart rate, increased breathing rate, pupils dilate, blood diverted to muscles, glycogen broken down → glucose for muscles
+
+REPRODUCTIVE HORMONES AND THE MENSTRUAL CYCLE:
+- FSH (follicle-stimulating hormone): produced by pituitary; stimulates egg maturation and oestrogen production
+- Oestrogen: produced by ovaries; repairs uterus lining; triggers LH surge
+- LH (luteinising hormone): triggers ovulation (release of egg) on day ~14
+- Progesterone: maintains uterus lining (prepares for implantation); produced by corpus luteum
+
+PUBERTY HORMONES:
+- Both sexes: growth hormone, adrenal androgens
+- Female: oestrogen and progesterone (menstrual cycle; breast development; pubic hair; widening hips)
+- Male: testosterone (sperm production; deepening voice; facial and pubic hair; muscle development)`,
+
+    'Reproduction in Plants': `Biology — Reproduction in Plants
+
+SEXUAL REPRODUCTION IN PLANTS (uses flowers):
+
+PARTS OF A FLOWER:
+- Petals: attract insects (insect-pollinated flowers: large, colourful, scented, have nectar)
+- Sepals: protect the flower bud
+- Stamen (male): anther (produces pollen — contains male gametes) + filament (stalk)
+- Carpel (female): stigma (sticky surface that receives pollen) + style (connects stigma to ovary) + ovary (contains ovules — female gametes)
+- Nectary: produces nectar to attract insects
+
+POLLINATION: transfer of pollen from anther to stigma
+Insect-pollinated: large/colourful petals; scented; produce nectar; sticky or hooked pollen; sticky stigma
+Wind-pollinated: small/no petals; no scent or nectar; large amounts of light, smooth pollen; feathery/large stigmas hanging outside flower; e.g. grasses
+
+FERTILISATION:
+- Pollen grain lands on stigma → pollen tube grows down through style → male gamete travels down tube → fertilises ovule in ovary
+- Fertilised ovule → seed; ovary wall → fruit
+
+SEED DISPERSAL (prevents competition with parent plant):
+- Wind: light, feathery seeds or wings (e.g. dandelion, sycamore)
+- Animal — eaten: fleshy fruits; seeds pass through gut undamaged (e.g. berries, cherries)
+- Animal — hooked: hooks/spines catch on fur/clothing (e.g. burdock)
+- Water: buoyant, waterproof seeds (e.g. coconut)
+- Self-dispersal/explosive: seed pod dries and explodes, flinging seeds (e.g. peas, gorse)
+
+ASEXUAL REPRODUCTION IN PLANTS (produces genetically identical offspring — clones):
+- Runners (stolons): horizontal stems grow outward; new plant develops at end (e.g. strawberry)
+- Bulbs: underground storage organs; new bulbs form alongside parent (e.g. daffodil, tulip)
+- Tubers: underground stems; new plants grow from 'eyes' (e.g. potato)
+- Cuttings: stem/leaf cut from parent and planted; develops roots (e.g. geranium)
+- Tissue culture (micropropagation): small piece of plant tissue grown in sterile nutrient medium; produces many identical plants quickly`,
+
+    'Reproduction in Animals': `Biology — Reproduction in Animals
+
+SEXUAL REPRODUCTION:
+- Requires two parents; gametes (sex cells) from each parent fuse (fertilisation)
+- Produces genetically UNIQUE offspring (variation)
+- Male gamete = sperm (small, mobile, has tail/flagellum, produced in testes)
+- Female gamete = egg/ovum (large, immobile, contains food store, produced in ovaries)
+
+FERTILISATION:
+- External fertilisation: sperm and egg meet OUTSIDE the body; common in aquatic animals (fish, frogs, amphibians); must produce large numbers of eggs/sperm as many lost
+- Internal fertilisation: sperm placed inside the female's body; more efficient; used by reptiles, birds, mammals
+
+DEVELOPMENT AFTER FERTILISATION:
+- Oviparous (egg-laying): embryo develops inside an egg outside mother's body; e.g. birds, reptiles, most fish; egg provides food store
+- Viviparous (live birth): embryo develops inside mother's uterus; nourished via placenta; e.g. most mammals including humans
+- Ovoviviparous: eggs kept inside mother's body but no placental connection; e.g. some sharks, some lizards
+
+HUMAN REPRODUCTION:
+- Fertilisation: occurs in the Fallopian tube (oviduct)
+- Implantation: fertilised egg (zygote) travels to uterus and embeds in uterus lining
+- Placenta: organ connecting embryo to mother's blood supply; allows exchange of O₂, glucose, amino acids, CO₂, urea; acts as barrier to most pathogens and some harmful substances
+- Umbilical cord: connects foetus to placenta
+- Gestation (pregnancy): ~9 months (40 weeks) in humans
+- Amniotic fluid: cushions and protects the foetus
+
+ASEXUAL REPRODUCTION IN ANIMALS:
+- Only one parent; offspring are genetically identical (clones)
+- Less common in animals; examples: hydra (budding), starfish (fragmentation), aphids (parthenogenesis)`,
+
+    'Human Development and Health': `Biology — Human Development and Health
+
+STAGES OF HUMAN DEVELOPMENT:
+- Foetal stage: development in the uterus (0–9 months); major organ systems form
+- Infancy (0–2 years): rapid growth; learning basic motor skills
+- Childhood (2–puberty): continued growth; development of language, social skills
+- Adolescence/puberty: sexual maturation; growth spurt
+- Adulthood: growth stops; reproductive years; peak physical condition
+- Old age: decline in physical and mental function; immune system weakens
+
+PUBERTY:
+Changes in BOTH sexes: pubic/underarm hair grows; body odour; acne; growth spurt; mood changes
+In FEMALES: breasts develop; hips widen; menstrual cycle begins; pubic/leg hair; controlled by oestrogen and progesterone
+In MALES: testes and penis enlarge; voice deepens; facial/body hair; muscle development; sperm production begins; controlled by testosterone
+
+EFFECTS OF DRUGS ON HEALTH:
+- Alcohol: depressant; slows nervous system; liver damage (cirrhosis), brain damage, addiction, birth defects if drunk during pregnancy
+- Tobacco/smoking: nicotine (addictive); tar (causes cancer — lung, throat); carbon monoxide (binds to haemoglobin, reduces O₂ transport); increases risk of cardiovascular disease, emphysema, chronic bronchitis; restricts foetal growth if smoked during pregnancy
+- Recreational drugs: stimulants (increase CNS activity — e.g. cocaine, amphetamines); depressants (slow CNS — e.g. alcohol, cannabis, opioids); hallucinogens (distort perception — e.g. LSD)
+
+SEXUALLY TRANSMITTED INFECTIONS (STIs):
+- HIV: virus; destroys immune cells; leads to AIDS; spread by unprotected sex, sharing needles, blood-to-blood contact; no cure but managed with antiretroviral drugs
+- Chlamydia: bacterial; often no symptoms; can cause infertility if untreated; treated with antibiotics
+- Prevention: condoms, vaccination (HPV), testing, reducing number of partners
+
+CONTRACEPTION:
+- Hormonal: pill (oestrogen/progesterone — prevents ovulation), implant, injection, patch, hormonal coil (IUS)
+- Barrier: condom (also protects against STIs), diaphragm
+- Intrauterine device (copper coil): prevents implantation
+- Surgical: vasectomy (male), tubal ligation (female) — permanent
+- Abstinence: 100% effective
+
+IMMUNE SYSTEM AND VACCINATION:
+- Pathogens: microorganisms that cause disease (bacteria, viruses, fungi, parasites)
+- Vaccination: introduces weakened/dead pathogen or antigen; immune system produces antibodies and memory lymphocytes; future exposure → rapid immune response → prevents disease`,
+
+    'Classification': `Biology — Classification
+
+CLASSIFICATION: organising living things into groups based on shared characteristics
+
+TAXONOMY — LEVELS (largest to smallest):
+Kingdom → Phylum → Class → Order → Family → Genus → Species
+Mnemonic: "King Philip Came Over For Good Soup"
+
+BINOMIAL NOMENCLATURE (Linnaeus, 18th century):
+- Every species has a two-part Latin name: Genus species (e.g. Homo sapiens, Panthera leo)
+- Always written in italics (or underlined); genus has capital letter, species is lowercase
+- Used universally across languages
+
+THE FIVE KINGDOMS (traditional classification):
+1. Animalia (animals): multicellular; eukaryotic; no cell wall; heterotrophs; can move
+2. Plantae (plants): multicellular; eukaryotic; cell wall of cellulose; autotrophs (photosynthesis)
+3. Fungi: eukaryotic; cell wall of chitin; saprophytic (digest dead matter externally); e.g. mushrooms, yeast
+4. Protista (protoctista): mostly unicellular; eukaryotic; diverse group; e.g. Amoeba, Paramecium, algae
+5. Prokaryotae (bacteria/monera): prokaryotic (no nucleus); no membrane-bound organelles; cell wall (not cellulose); e.g. E. coli
+
+THREE DOMAINS (modern classification — based on molecular evidence):
+- Bacteria (true bacteria)
+- Archaea (ancient bacteria-like organisms living in extreme environments)
+- Eukarya (all eukaryotes — plants, animals, fungi, protists)
+
+VERTEBRATES vs INVERTEBRATES:
+Vertebrates (have a backbone): fish, amphibians, reptiles, birds, mammals
+Invertebrates (no backbone): insects, worms, molluscs, arachnids, crustaceans, echinoderms
+
+DICHOTOMOUS KEYS: tool for identifying organisms using a series of yes/no questions about observable features; work through questions until organism is identified`,
+
+    'Variation and Evolution': `Biology — Variation and Evolution
+
+VARIATION: differences between individuals of the same species
+
+TYPES OF VARIATION:
+- Continuous: shows a range of values across a continuum; controlled by many genes + environment; e.g. height, mass, skin colour; shown on histogram/line graph
+- Discontinuous: falls into distinct categories; controlled by one or few genes; e.g. ABO blood group, attached/free earlobes, tongue rolling; shown on bar chart
+
+CAUSES OF VARIATION:
+- Genetic: inherited from parents through gametes (DNA); mutations; sexual reproduction shuffles alleles
+- Environmental: conditions during growth (diet, sunlight, temperature, illness)
+- Combination of both: most continuous variation has genetic AND environmental component
+
+NATURAL SELECTION (Darwin, 1859 — 'On the Origin of Species'):
+1. Within a population, there is variation in characteristics
+2. Organisms produce more offspring than can survive (competition for resources)
+3. Some individuals have characteristics (adaptations) that make them better suited to their environment → better chance of survival ('survival of the fittest')
+4. These individuals are more likely to reproduce → pass on their favourable alleles to offspring
+5. Over many generations, the frequency of favourable alleles increases in the population → population changes
+
+EVOLUTION: change in the inherited characteristics of a population over successive generations
+
+EVIDENCE FOR EVOLUTION:
+- Fossil record: shows changes in organisms over geological time; transitional fossils
+- Comparative anatomy: homologous structures in different species (e.g. pentadactyl limb in mammals, birds, reptiles — same bones, different adaptations)
+- DNA evidence: closely related species have more similar DNA sequences
+- Antibiotic resistance: bacteria rapidly evolve resistance — observable example of natural selection
+
+SPECIATION: formation of a new species; occurs when populations become geographically isolated → different selection pressures → different adaptations → eventually cannot interbreed
+
+EXTINCTION: when all members of a species die; caused by habitat destruction, climate change, disease, hunting, competition from invasive species`,
+
+    'Microorganisms and Biotechnology': `Biology — Microorganisms and Biotechnology
+
+TYPES OF MICROORGANISM:
+- Bacteria: prokaryotic (no nucleus); 1–10 μm; reproduce by binary fission; some beneficial (gut bacteria, decomposers, nitrogen fixation), some pathogenic (e.g. Salmonella, tuberculosis, Chlamydia)
+- Viruses: not cells; 20–300 nm; not truly living; need host cell to reproduce; inject genetic material into host; host cell makes copies; cell bursts releasing viruses; examples: influenza, HIV, COVID-19, common cold
+- Fungi: eukaryotic; can be unicellular (yeast) or multicellular (moulds, mushrooms); cell wall of chitin; reproduce by spores; examples of disease: athlete's foot, thrush (Candida), ringworm
+
+DISEASE TRANSMISSION:
+- Airborne (droplets): coughing, sneezing → influenza, tuberculosis, COVID-19
+- Direct contact: skin-to-skin, sexual contact → STIs, athlete's foot
+- Contaminated water/food: Salmonella, cholera
+- Vectors: organisms that carry pathogens → malaria (mosquitoes), Lyme disease (ticks)
+- Blood-to-blood: HIV, hepatitis B
+
+BODY'S DEFENCES:
+- Skin: physical barrier; slightly acidic
+- Mucus: traps pathogens in airways; cilia sweep mucus away
+- Stomach acid: kills most ingested pathogens
+- Phagocytes: engulf and digest pathogens (phagocytosis)
+- Lymphocytes: produce antibodies specific to antigens on the pathogen; produce memory cells
+
+ANTIBIOTICS: kill bacteria by destroying cell walls or disrupting cell processes; NOT effective against viruses; overuse leads to antibiotic resistance (natural selection of resistant strains)
+
+VACCINATION: introduces weakened/dead pathogen or antigen; stimulates antibody production and memory cells; provides immunity without causing disease; herd immunity protects unvaccinated people if enough of the population is vaccinated
+
+BIOTECHNOLOGY APPLICATIONS:
+- Fermentation: yeast ferments sugars → ethanol + CO₂ (brewing/baking); bacteria produce yogurt and cheese
+- Genetic engineering: inserting genes from one organism into another; e.g. bacteria produce human insulin (for diabetes treatment); GM crops (pest-resistant, drought-resistant)
+- Antibiotics production: penicillin discovered from Penicillium mould (Fleming, 1928)
+- Biofuels: microorganisms break down biomass to produce biogas (methane) or bioethanol`,
+
+    'Ecology': `Biology — Ecology
+
+KEY TERMS:
+- Habitat: place where an organism lives
+- Population: all individuals of one species in a habitat
+- Community: all populations of all species in a habitat
+- Ecosystem: community + its non-living (abiotic) environment
+- Biosphere: all ecosystems on Earth
+
+BIOTIC AND ABIOTIC FACTORS:
+- Biotic (living): competition, predation, disease, parasitism, mutualism
+- Abiotic (non-living): temperature, light intensity, water availability, pH, salinity, wind speed, soil composition
+
+FOOD CHAINS AND FOOD WEBS:
+- Producer: makes own food (photosynthesis); always first in chain (e.g. grass, algae)
+- Primary consumer: herbivore; eats producer
+- Secondary consumer: eats primary consumer
+- Tertiary consumer: eats secondary consumer
+- Decomposers: bacteria and fungi; break down dead organisms; recycle nutrients
+
+Energy flow: Sun → producers → consumers; energy is lost at each trophic level (as heat, movement, undigested waste) → ~10% transferred to next level → food chains rarely exceed 4–5 links
+Biomass pyramid: shows mass at each trophic level; always pyramid-shaped (wider at base)
+
+POPULATION DYNAMICS:
+- Predator-prey relationships: predator population increases → prey decreases → predator decreases (less food) → prey recovers → cycle repeats (time lag between populations)
+- Population size affected by: food availability, predation, disease, competition, reproductive rate
+
+THE CARBON CYCLE (key processes):
+- Photosynthesis: CO₂ removed from air → organic carbon in plants
+- Respiration: organic carbon → CO₂ released
+- Decomposition: dead matter → CO₂ released by decomposers
+- Combustion: fossil fuels and biomass → CO₂ released
+- Feeding: carbon passed along food chain
+
+THE NITROGEN CYCLE:
+- Nitrogen fixation: N₂ gas → nitrates; by lightning or nitrogen-fixing bacteria (in soil or root nodules of legumes, e.g. peas, beans)
+- Nitrification: ammonium ions → nitrates; by nitrifying bacteria
+- Denitrification: nitrates → N₂ gas; by denitrifying bacteria (in waterlogged soils)
+- Decomposition: proteins and urea → ammonium ions
+- Plants absorb nitrates from soil → make proteins
+
+HUMAN IMPACT ON ECOSYSTEMS:
+- Deforestation: habitat loss, biodiversity loss, increased CO₂, soil erosion
+- Pollution: acid rain, plastic waste, oil spills, fertiliser run-off (eutrophication)
+- Climate change: shifts habitats, changes seasons, coral bleaching
+- Overfishing: collapse of fish populations
+- Conservation: protected areas, captive breeding, seed banks, reforestation`,
+
+    'Investigations': `Biology — Investigations
+
+THE SCIENTIFIC METHOD:
+1. Observation → question arises
+2. Research existing knowledge
+3. Form a hypothesis (a testable prediction)
+4. Plan and carry out an experiment
+5. Collect and record data
+6. Analyse results (graphs, calculations)
+7. Draw conclusions (does evidence support the hypothesis?)
+8. Evaluate and suggest improvements
+
+VARIABLES:
+- Independent variable (IV): the variable you deliberately change; ONE change per experiment
+- Dependent variable (DV): the variable you measure/observe; changes as a result of the IV
+- Control variables: all other variables kept the same to ensure a fair test
+- Control experiment: identical to the real experiment but without the IV; confirms the IV is causing the effect
+
+RELIABILITY AND VALIDITY:
+- Reliability: how consistent/reproducible results are; improved by repeating the experiment and calculating a mean
+- Validity: does the experiment actually measure what it intends to? Ensured by controlling all variables properly
+- Anomalies (anomalous results): data points that do not fit the pattern; should be identified, excluded from means, and investigated
+
+SAMPLING METHODS:
+- Random sampling: avoids bias; every location has equal chance (e.g. randomly placed quadrats)
+- Systematic sampling: at regular intervals (e.g. every 5 m along a transect)
+- Quadrats: square frames placed to sample plants or slow-moving animals; count or estimate percentage cover
+- Transects: line across a habitat; sample organisms at intervals along the line
+
+GRAPHS AND DATA PRESENTATION:
+- Bar chart: for discontinuous/categoric data
+- Line graph: for continuous data; draw a line of best fit (trend line, NOT dot-to-dot)
+- Scatter graph: to show correlation between two continuous variables
+- Axes: always label with name and unit; use consistent scale starting from zero where appropriate
+- Line of best fit: shows general trend; roughly equal numbers of points either side
+
+CONCLUSIONS AND EVALUATIONS:
+- Conclusion: state whether the hypothesis is supported; refer to specific data
+- Evaluation: comment on reliability (repeats, anomalies), validity (control of variables), limitations, suggest improvements`,
   },
 
   Chemistry: {
