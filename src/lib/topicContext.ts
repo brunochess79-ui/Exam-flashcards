@@ -139,151 +139,424 @@ Asexual reproduction (cloning): no fertilisation; genetically identical offsprin
   },
 
   Chemistry: {
-    'Atomic Structure and the Periodic Table': `GCSE Chemistry — Atomic Structure and the Periodic Table
+    '7.1 — Intro to Chemistry': `Chemistry 7.1 — Intro to Chemistry
 
-ATOMIC STRUCTURE:
-- Protons: positive charge (+1); in nucleus; atomic number = number of protons
-- Neutrons: no charge (0); in nucleus; mass number = protons + neutrons; number of neutrons = mass number − atomic number
-- Electrons: negative charge (−1); in shells/energy levels around nucleus; number = number of protons (in neutral atom)
-- Atoms are mostly empty space; nucleus is tiny but contains most of the mass
+HAZARD SYMBOLS AND MEANINGS:
+- Irritant (orange X on white): causes skin/eye irritation; e.g. dilute acids
+- Harmful (orange X on white, different context): damaging to health if swallowed, inhaled or absorbed through skin
+- Corrosive (test tube dripping onto hand and surface): destroys living tissue and materials on contact; e.g. concentrated acids, concentrated alkalis
+- Toxic (skull and crossbones): can cause death or serious harm if swallowed, inhaled or absorbed; e.g. chlorine gas, mercury
+- Highly flammable (flame): catches fire easily; e.g. ethanol, hydrogen
+- Oxidising (flame over circle): provides oxygen to cause or intensify fires; e.g. hydrogen peroxide, potassium permanganate
+- Long-term health hazard (exclamation mark or person silhouette): may cause cancer, reproductive harm, organ damage over time; e.g. some solvents
+- Explosive (exploding bomb): can explode under certain conditions; e.g. ammonium nitrate
+- Harmful to the environment (dead tree and fish): toxic to aquatic or terrestrial ecosystems; e.g. pesticides, heavy metal compounds
 
-ISOTOPES: atoms of the same element with the same number of protons but different numbers of neutrons (e.g. Carbon-12 and Carbon-14); same chemical properties, different mass
+LAB SAFETY RULES:
+- Always wear safety glasses/goggles to protect eyes from splashes and fumes
+- Stand during practical work (allows you to move quickly if something goes wrong)
+- Do not run in the laboratory
+- No food or drink in the lab (risk of contamination or ingesting chemicals)
+- Tie back long hair and loose clothing near flames
+- Know the location of the fire extinguisher, fire blanket, eye wash and emergency exit
 
-ELECTRON SHELLS (GCSE level):
-- Shell 1: maximum 2 electrons
-- Shell 2: maximum 8 electrons
-- Shell 3: maximum 8 electrons (at GCSE)
-- Electronic configuration written as: e.g. Sodium (Na, atomic number 11) = 2,8,1
-- Outer shell electrons determine chemical reactivity
+BUNSEN BURNER:
+Main parts: base (heavy, for stability), barrel/chimney (where gas mixes with air and burns), collar (rotates to open/close the air hole), gas hose (connects to gas tap)
+
+FLAME TYPES:
+- Yellow safety flame (air hole CLOSED): yellow/orange colour; cooler; produces soot (carbon particles); luminous and visible; used when NOT actively heating — e.g. when waiting between experiments
+- Roaring blue flame (air hole OPEN): blue colour; much hotter; no soot; harder to see; used ONLY when actively heating something`,
+
+    '7.2 — Particle Theory': `Chemistry 7.2 — Particle Theory
+
+ARRANGEMENT OF PARTICLES IN EACH STATE:
+- Solid: particles tightly packed in a regular, ordered pattern (lattice); held in fixed positions; vibrate on the spot; cannot move around
+- Liquid: particles tightly packed but NOT in a regular pattern; can move and slide past one another; no fixed shape
+- Gas: particles NOT touching; spread far apart; move quickly and randomly in all directions; fill any container
+
+ENERGY IN EACH STATE:
+- Solids have the LEAST kinetic energy (particles only vibrate)
+- Liquids have MORE energy than solids (particles can slide)
+- Gases have the MOST energy (particles fully free and fast-moving)
+
+CHANGES OF STATE:
+- Melting: solid → liquid (gain energy)
+- Boiling/evaporating: liquid → gas (gain energy)
+- Condensing: gas → liquid (lose energy)
+- Freezing: liquid → solid (lose energy)
+- Sublimation: solid → gas directly (gain energy, skipping liquid stage); e.g. dry ice (solid CO₂)
+
+EXPLAINING CHANGES OF STATE USING FORCES AND ENERGY:
+- There are forces holding particles together in all states
+- In a solid: particles do NOT have enough kinetic energy to overcome these forces → locked in place
+- In a liquid: kinetic energy has PARTIALLY overcome the forces → particles can slide but stay close
+- In a gas: kinetic energy has FULLY overcome the forces → particles completely separated
+- At the melting point or boiling point: particles have just enough energy to overcome the forces; energy input is used to break forces, NOT to raise temperature (explains flat plateaux on heating/cooling curves)
+
+HEATING AND COOLING CURVES:
+- Plateau (flat section): temperature stops changing during a change of state; energy is being used to break (or form) bonds between particles rather than raising temperature
+- The temperature at the plateau = melting point (on heating) or freezing point (on cooling)
+- Melting point = freezing point for a pure substance
+- Pure substance: sharp, perfectly flat, horizontal plateau
+- Impure substance: no sharp flat plateau; temperature continues to change gradually during the state change → more wavy/sloped line; the melting range is broader
+
+DIFFUSION:
+- Definition: the net movement of particles from an area of HIGH concentration to an area of LOW concentration
+- Cause: particles in liquids and gases are in CONTINUOUS, RANDOM motion
+- Result: random movement eventually leads to particles spreading out evenly (equilibrium)
+- Effect of temperature: higher temperature → more kinetic energy → particles move faster → diffuse MORE quickly
+- Effect of particle mass: lighter particles (lower mass) move faster at the same temperature → diffuse MORE quickly than heavier particles`,
+
+    '7.3 — Elements, Compounds and Mixtures': `Chemistry 7.3 — Elements, Compounds and Mixtures
+
+ELEMENTS:
+- Made up of only ONE type of atom
+- All elements are found in the periodic table
+- Divided into metals (left side) and non-metals (right side); separated by a zigzag line starting between Boron (B) and Aluminium (Al), going diagonally down and right
+- Arranged in order of atomic (proton) number
+
+MIXTURES:
+- Two or more substances that are NOT chemically bonded
+- Can be separated by physical methods
+- A solution is one type of mixture: solute (solid part) dissolved in a solvent (liquid part)
+- Soluble substances appear to disappear when added to water — their particles split up and move between water molecules; no bonds form → still a mixture
+- Insoluble substances do NOT dissolve — particles do not split up and separate into water molecules
+
+COMPOUNDS:
+- A group of DIFFERENT atoms chemically bonded together
+- A molecule is a group of the same or different atoms chemically bonded (e.g. O₂ is a molecule but not a compound; H₂O is both a molecule and a compound)
+
+NAMING COMPOUNDS:
+Non-metal compounds: named using element names + prefix for number of second element
+- di = 2, tri = 3, tetra = 4 (e.g. SO₂ = sulfur dioxide; CO₂ = carbon dioxide; CCl₄ = carbon tetrachloride)
+
+Metal + non-metal compounds: metal name first, then non-metal with suffix -ide
+- e.g. NaCl = sodium chloride; MgO = magnesium oxide; CaBr₂ = calcium bromide
+- Exception: if oxygen is added to the non-metal part, the suffix becomes -ate instead of -ide
+  - Sulfur + oxygen → sulfate; nitrogen + oxygen → nitrate; carbon + oxygen → carbonate; oxygen + hydrogen → hydroxide
+
+FORMULAE:
+- Subscript numbers show how many of each atom (e.g. H₂SO₄: 2 H, 1 S, 4 O)
+- Non-metal compounds: write formula directly from prefix (e.g. sulfur dioxide → SO₂)
+- Metal + non-metal: use ion charges to balance (compound must have overall charge of 0)
+
+ION CHARGES (from periodic table position):
+Group 1: 1+; Group 2: 2+; Group 3: 3+; Transition metals: varies (mostly 2+)
+Group 5: 3−; Group 6: 2−; Group 7: 1−
+
+MOLECULAR ION FORMULAE:
+Sulfate: SO₄²⁻; Nitrate: NO₃⁻; Carbonate: CO₃²⁻; Hydroxide: OH⁻; Hydrogen ion: H⁺`,
+
+    '7.4 — Separating Substances': `Chemistry 7.4 — Separating Substances
+
+CHROMATOGRAPHY (separates dissolved substances, e.g. dyes in ink):
+- Solvent moves up a piece of chromatography paper, dissolving the ink and carrying it upward
+- Substances MORE soluble in the solvent AND less attracted to the paper travel FURTHER up
+- Substances LESS soluble in the solvent AND more attracted to the paper travel a SHORTER distance
+- Substances insoluble in that solvent do not move at all → must try a different solvent
+- Rf value = distance moved by substance ÷ distance moved by solvent front
+- Starting line must be drawn in PENCIL (not ink), because ink is soluble and would move up the paper with the samples
+- Water level must be BELOW the starting line — if above, the ink would dissolve into the water rather than travelling up the paper
+
+SIMPLE DISTILLATION (separates a liquid from a solution when boiling points are very different):
+- Solution is heated; the liquid with the lower boiling point boils and turns to vapour; the solute does not boil
+- Vapour travels into the condenser (cooled by cold water flowing around it)
+- Vapour condenses back into liquid and is collected in a beaker
+- Thermometer reads the temperature of the gas vapour passing over it (e.g. 100°C for water)
+- Example use: separating pure water from inky water
+
+FRACTIONAL DISTILLATION (separates a mixture of liquids with CLOSE boiling points):
+- Apparatus similar to simple distillation but includes a fractionating column filled with glass beads
+- The beads provide a large surface area; components repeatedly condense and re-evaporate; component with lowest boiling point reaches the top first
+- Example use: separating ethanol (b.p. 78°C) from water (b.p. 100°C); separating crude oil fractions
+
+FILTRATION (separates an insoluble solid from a liquid):
+- Mixture poured through filter paper in a funnel
+- Small water/liquid particles pass through tiny pores in the filter paper → collected as the FILTRATE
+- Large insoluble solid particles cannot pass through → remain on paper as the RESIDUE
+- Example: separating sand from water
+
+EVAPORATION (separates a soluble solid from a solution when you don't need to keep the liquid):
+- Solution heated gently in an evaporating dish
+- Heat until about half the water has evaporated; then leave to cool and crystallise (do not evaporate to complete dryness — crystals may crack/spit)
+- Liquid solvent evaporates into the air; solid solute remains as crystals
+- Example: obtaining salt crystals from salt water`,
+
+    '7.5 — Types of Chemical Reaction': `Chemistry 7.5 — Types of Chemical Reaction
+
+LAW OF CONSERVATION OF MASS:
+- Mass is NEVER lost or gained in a chemical reaction
+- Atoms are only REARRANGED — none created or destroyed
+- Total mass of reactants = total mass of products
+- Apparent changes in mass occur if a GAS is involved and the container is open:
+  - Gas PRODUCED and escapes → measured mass appears to DECREASE
+  - Gas from the air reacts and becomes part of a product → measured mass appears to INCREASE (e.g. oxidation of metals)
+
+OXIDATION:
+- Definition: a reaction where a substance GAINS oxygen
+- General word equation: Element + Oxygen → Element Oxide
+- Burning magnesium: produces a bright white light; forms white powder (magnesium oxide)
+  Magnesium + Oxygen → Magnesium oxide; 2Mg + O₂ → 2MgO
+- Burning sulfur: produces a blue flame; produces colourless, choking gas (sulfur dioxide)
+  Sulfur + Oxygen → Sulfur dioxide; S + O₂ → SO₂
+
+RUSTING:
+- Specific name for the oxidation of iron or steel
+- Requires BOTH oxygen (from air) AND water to occur (neither alone causes rusting)
+- Prevention: painting, oiling, coating with plastic (barrier against air and water), galvanising (zinc coating), alloying
+
+COMPLETE COMBUSTION:
+- Burning a hydrocarbon fuel in a PLENTIFUL supply of oxygen
+- Only products: carbon dioxide and water
+- Test for CO₂: bubble gas through limewater → limewater turns cloudy/milky (positive result)
+- Test for water: use anhydrous copper(II) sulfate; turns from WHITE to BLUE (positive result)
+
+THERMAL DECOMPOSITION:
+- Definition: a single compound breaks down into two or more simpler substances using heat
+- General word equation: Metal Carbonate → Metal Oxide + Carbon Dioxide
+  e.g. Calcium carbonate → Calcium oxide + Carbon dioxide; CaCO₃ → CaO + CO₂
+- Observations: often a colour change; gas produced (CO₂ turns limewater cloudy)
+
+DISPLACEMENT REACTIONS:
+- A MORE reactive element takes the place of a LESS reactive element in a compound
+- General word equation: More Reactive Element + Compound → Less Reactive Element + New Compound
+- Example: Magnesium + Copper Sulfate → Magnesium Sulfate + Copper
+  Mg + CuSO₄ → MgSO₄ + Cu`,
+
+    '7.6 — Acids and Alkalis': `Chemistry 7.6 — Acids and Alkalis
+
+ACIDS:
+- Solutions with pH LESS than 7 when dissolved in water
+- Strong acids (lab): Hydrochloric acid (HCl), Sulfuric acid (H₂SO₄), Nitric acid (HNO₃)
+- Weak acids (home): vinegar (ethanoic acid), lemon juice (citric acid)
+
+ALKALIS:
+- Solutions with pH MORE than 7 when dissolved in water
+- Strong alkalis (lab): Sodium hydroxide (NaOH), Potassium hydroxide (KOH)
+- Weak alkalis (home): oven cleaner, baking soda solution
+
+THE pH SCALE:
+- Runs from 0 (most acidic) to 14 (most alkaline)
+- pH 7 = neutral (e.g. pure water)
+- pH below 7 = acidic (lower number = stronger acid)
+- pH above 7 = alkaline (higher number = stronger alkali)
+
+INDICATORS:
+- An indicator is a substance that changes colour to show the pH of a solution
+- Universal indicator: add a few drops and compare colour to pH chart; gives approximate pH; red/orange (acidic) → green (neutral) → blue/purple (alkaline)
+- Litmus: red in acid; purple in neutral; blue in alkali
+
+NEUTRALISATION — ACID + ALKALI:
+General word equation: Acid + Alkali → Salt + Water
+- Salt name = metal (from alkali) + non-metal anion (from acid)
+  - Hydrochloric acid → chlorides; Nitric acid → nitrates; Sulfuric acid → sulfates
+- e.g. HCl + NaOH → NaCl + H₂O (hydrochloric acid + sodium hydroxide → sodium chloride + water)
+- e.g. H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O
+- Use ion charges (from provided table) to determine formula: ionic compounds must have overall charge of 0
+
+ACID + METAL CARBONATE:
+General word equation: Acid + Metal Carbonate → Salt + Water + Carbon Dioxide
+- e.g. HCl + CaCO₃ → CaCl₂ + H₂O + CO₂
+- Observation: bubbling/fizzing; limewater turns cloudy (CO₂ test)
+
+ACID + METAL:
+General word equation: Acid + Metal → Salt + Hydrogen
+- e.g. Mg + H₂SO₄ → MgSO₄ + H₂ (magnesium + sulfuric acid → magnesium sulfate + hydrogen)
+- Observation: bubbling/fizzing; hydrogen gas burns with a squeaky pop (hydrogen gas test)
+
+ION CHARGES FOR WORKING OUT FORMULAE:
+Group 1: 1+; Group 2: 2+; Group 3: 3+; Transition metals: mostly 2+; Group 6: 2−; Group 7: 1−
+Molecular ions: Sulfate SO₄²⁻; Nitrate NO₃⁻; Carbonate CO₃²⁻; Hydroxide OH⁻; H⁺`,
+
+    '8.1 — Atomic Structure and the Periodic Table': `Chemistry 8.1 — Atomic Structure and the Periodic Table
+
+STRUCTURE OF AN ATOM:
+- Nucleus contains: protons (relative mass 1, charge +1) and neutrons (relative mass 1, charge 0)
+- Electrons surround the nucleus in shells (relative mass 1/2000, charge −1)
+- All atoms are NEUTRAL: number of protons = number of electrons
+- The nucleus is very small compared to the overall size of the atom
+- Most of the mass is concentrated in the nucleus; most of the atom is empty space
+
+MASS NUMBER AND ATOMIC NUMBER:
+- Atomic number = number of protons in nucleus (unique to each element)
+- Mass number = protons + neutrons (specific to a single atom/isotope, NOT the number shown on the periodic table for the element)
+- Number of neutrons = mass number − atomic number
+
+HISTORY OF THE ATOMIC MODEL:
+- Dalton: atoms are tiny, indivisible spheres
+- JJ Thomson: discovered the electron; proposed the plum pudding model — atoms are solid, uniform spheres of positive charge with negatively charged electrons embedded throughout (like raisins in a pudding)
+- Rutherford: fired alpha particles at a thin gold foil (gold foil experiment); MOST passed straight through → atoms are mostly empty space; a SMALL number bounced back → positive charge is concentrated in a very small nucleus at the centre; disproved the plum pudding model
+- Bohr: electrons orbit the nucleus in fixed shells (energy levels)
 
 THE PERIODIC TABLE:
-- Elements arranged in order of increasing atomic number
-- Periods (rows): elements in same period have same number of electron shells
-- Groups (columns): elements in same group have the same number of outer shell electrons → similar chemical properties
-- Group number = number of outer shell electrons (Groups 1–7 and 0)
-- Metals: left and centre; conduct electricity and heat; malleable; form positive ions
-- Non-metals: right side; poor conductors (except graphite); form negative ions or share electrons
+- Elements arranged in order of increasing atomic number (proton number)
+- Periods (rows): all elements in the same period have the same number of occupied electron shells
+- Groups (columns): all elements in the same group have the same number of outer shell electrons → react in similar ways
+- Metals: left side; non-metals: right side; separated by a zigzag line starting between Boron and Aluminium, heading diagonally down and right
+- Elements in the same group react similarly to each other
 
-KEY GROUPS:
-- Group 1 (Alkali metals — Li, Na, K, Rb, Cs): one outer electron; react vigorously with water → metal hydroxide + hydrogen gas; reactivity INCREASES down the group (outer electron further from nucleus, more shielding, easier to lose)
-  2Na + 2H₂O → 2NaOH + H₂
-- Group 7 (Halogens — F, Cl, Br, I): seven outer electrons; diatomic molecules (F₂, Cl₂, etc.); reactivity DECREASES down the group (harder to gain an electron further from nucleus); more reactive halogen displaces less reactive one from salt solution
-- Group 0 (Noble gases — He, Ne, Ar): full outer shells; unreactive/inert; used in light bulbs, balloons (He), lasers (Ar)
-- Transition metals (centre block): high melting points; hard and dense; form coloured compounds; can act as catalysts; form ions with different charges (e.g. Fe²⁺ and Fe³⁺)
+MENDELEEV'S PERIODIC TABLE:
+- Mendeleev ordered elements by relative atomic mass (not atomic number)
+- Kept elements with similar chemical properties in the same column, even if that meant leaving gaps
+- Predicted properties of undiscovered elements to fill the gaps — predictions proved to be correct
+- Some elements appeared out of order by atomic mass because of the relative abundance of isotopes — this was resolved when atomic number (proton number) became the ordering principle
 
-IONS: atoms that gain or lose electrons; metals lose electrons → positive ions (cations); non-metals gain electrons → negative ions (anions)`,
+ELECTRON SHELLS AND CONFIGURATION:
+- Shell 1: maximum 2 electrons; Shell 2: maximum 8; Shell 3: maximum 8; Shell 4: maximum 18
+- Fill inner shells first before moving to the next
+- Electron configuration written as e.g. 2.8.1 (sodium, atomic number 11)
+- Period number = number of occupied electron shells
+- Group number = number of electrons in the outer shell
+- When drawing: place first 4 electrons at N, S, E, W positions; then pair them (5th pairs with 1st, etc.)
 
-    'Heat Energy Changes': `GCSE Chemistry — Heat Energy Changes
+TRANSITION METALS:
+Typical properties: high melting point; high density; form coloured compounds; catalytic activity (e.g. iron as catalyst in Haber process)
 
-EXOTHERMIC REACTIONS: release heat energy to surroundings → temperature of surroundings RISES; products have less energy than reactants; energy is given out
-Examples: combustion (burning), respiration, neutralisation (acid + alkali), oxidation of metals, hand warmers
-Bond making releases energy.
+METAL AND NON-METAL OXIDES:
+- Dissolve oxides in water and test pH to determine type
+- Metal oxides dissolve to give ALKALINE solutions (alkaline oxides)
+- Non-metal oxides dissolve to give ACIDIC solutions (acidic oxides)
+- Alkaline solutions turn red litmus paper BLUE; acidic solutions turn blue litmus paper RED
 
-ENDOTHERMIC REACTIONS: absorb heat energy from surroundings → temperature of surroundings FALLS; products have more energy than reactants; energy is taken in
-Examples: thermal decomposition, dissolving ammonium nitrate in water, photosynthesis, sports cold packs
-Bond breaking requires energy.
+IONIC COMPOUNDS:
+- Made of a combination of metals and non-metals
+- Atoms gain charges (become ions): Group 1: 1+; Group 2: 2+; Group 3: 3+; Transition metals: mostly 2+; Group 5: 3−; Group 6: 2−; Group 7: 1−
+- Molecular ions: Sulfate SO₄²⁻; Nitrate NO₃⁻; Carbonate CO₃²⁻; Hydroxide OH⁻; H⁺
+- Ionic compounds are always NEUTRAL: combine appropriate numbers of ions so total charge = 0`,
 
-ENERGY PROFILE DIAGRAMS:
-- Exothermic: reactants at higher energy level than products; energy given out = difference between reactants and products; activation energy peak shown
-- Endothermic: products at higher energy level than reactants; energy absorbed; activation energy peak shown
-- Activation energy: the minimum energy needed for particles to react when they collide; shown as the peak above the reactant energy level
+    '8.2 — Heat Energy Changes': `Chemistry 8.2 — Heat Energy Changes
 
-CATALYSTS: lower the activation energy; provide an alternative reaction pathway; speed up reaction; not used up or changed; shown in energy profile as lower activation energy peak
+ENERGY IN REACTIONS:
+- All chemical reactions involve an energy change, normally as heat taken in or given out
+- When a reaction occurs in solution, the heat change causes the temperature of the solution to increase or decrease
 
-BOND ENERGIES:
-- Breaking bonds: always requires energy (endothermic)
-- Making bonds: always releases energy (exothermic)
-- If energy released (making bonds) > energy needed (breaking bonds) → overall exothermic reaction
-- If energy released < energy needed → overall endothermic reaction
-- Energy change = energy required to break bonds − energy released when new bonds form
+EXOTHERMIC REACTIONS:
+- Transfer heat energy TO the surroundings → temperature INCREASES
+- Heat energy is converted from chemical energy to kinetic (heat) energy
+- Products are at a LOWER energy level than reactants
+- Examples: combustion, respiration, neutralisation, hand warmers, many oxidation reactions
 
-CALORIMETRY (measuring heat energy):
-Q = mcΔT
-Q = heat energy transferred (joules, J)
-m = mass of solution/water (grams, g)
-c = specific heat capacity of water = 4.2 J/g°C
-ΔT = temperature change (°C)
+ENDOTHERMIC REACTIONS:
+- Take in heat energy FROM the surroundings → temperature DECREASES
+- Heat energy is converted from kinetic (heat) energy to chemical energy
+- Products are at a HIGHER energy level than reactants
+- Examples: thermal decomposition, dissolving ammonium nitrate, photosynthesis, cold packs
 
-HYDROGEN FUEL CELLS: hydrogen + oxygen → water; chemical energy converted directly to electrical energy; no CO₂ emissions; only by-product is water`,
+BOND BREAKING AND MAKING:
+- Breaking bonds: TAKES IN energy (endothermic process) — energy converted from heat to chemical
+- Making bonds: GIVES OUT energy (exothermic process) — energy converted from chemical to heat
+- In almost any reaction, bonds are both broken AND made
+- Overall energy change = balance between energy taken in (breaking) and energy given out (making)
+- Exothermic overall: energy released making new bonds > energy needed to break old bonds
+- Endothermic overall: energy released making new bonds < energy needed to break old bonds
 
-    'Reactivity Series, Metals, and Materials': `GCSE Chemistry — Reactivity Series, Metals, and Materials
+REACTION PROFILES (ENERGY DIAGRAMS):
+- y-axis: Energy; x-axis: Progress of reaction
+- Exothermic profile: reactants at higher level → peak (activation energy) → products at LOWER level; ΔH is negative
+- Endothermic profile: reactants at lower level → peak (activation energy) → products at HIGHER level; ΔH is positive
+- Activation energy (Ea): arrow from height of reactants up to the peak of the graph
+- ΔH (overall energy change): arrow from height of reactants to height of products
+- Activation energy is the MINIMUM energy colliding particles must have in order to react; needed to start breaking bonds in reactants
 
-REACTIVITY SERIES (most to least reactive):
-Potassium (K) > Sodium (Na) > Calcium (Ca) > Magnesium (Mg) > Aluminium (Al) > [Carbon (C)] > Zinc (Zn) > Iron (Fe) > Tin (Sn) > Lead (Pb) > [Hydrogen (H)] > Copper (Cu) > Silver (Ag) > Gold (Au) > Platinum (Pt)
-Mnemonic: "Please Stop Calling Me A Clever Zebra I Like Humans (Clearly Superior Good People)"
+CATALYSTS:
+- Definition: a substance that increases the rate of a reaction WITHOUT being used up
+- Does NOT change the products formed
+- Works by providing an ALTERNATIVE REACTION PATHWAY with a LOWER activation energy
+- Lower activation energy → more collisions have enough energy to react → faster rate
+- Shown on reaction profile as a lower peak (lower Ea), but same reactant and product levels
+- Enzymes: biological catalysts found in living organisms; e.g. yeast produces enzymes that catalyse fermentation of sugar into ethanol`,
 
-REACTIONS WITH WATER AND ACID:
-- Potassium, sodium, lithium: react vigorously with cold water → metal hydroxide + hydrogen
-- Calcium: reacts slowly with cold water → calcium hydroxide (limewater) + hydrogen
-- Magnesium: reacts with steam; reacts slowly with dilute acids
-- Metals above hydrogen in series react with dilute acids → salt + hydrogen
-- Copper, silver, gold: do not react with water or dilute acids
+    '8.3 — Reactivity Series, Metals, and Materials': `Chemistry 8.3 — Reactivity Series, Metals, and Materials
 
-DISPLACEMENT REACTIONS: a more reactive metal displaces a less reactive metal from a compound in solution
-e.g. iron + copper sulfate solution → iron sulfate + copper (iron is more reactive than copper)
-Fe + CuSO₄ → FeSO₄ + Cu
+ORES AND EXTRACTION:
+- Most metals are extracted from ORES found in the Earth's crust
+- Ore: a rock containing a high enough percentage of metal compound that it is economically worthwhile to extract the metal
+- Unreactive metals (silver, gold): found as uncombined elements in the Earth's crust
 
-EXTRACTION OF METALS:
-- Very reactive (K, Na, Ca, Mg, Al): extracted by electrolysis (too reactive to reduce with carbon)
-- Moderately reactive (Zn, Fe): extracted by reduction with carbon/coke in a blast furnace (e.g. iron ore + coke → iron + CO₂)
-- Less reactive (Cu, Ag, Au): found native or extracted by simple heating/smelting
+REACTIVITY SERIES (approximate order, most to least reactive):
+Group 1 (K, Na, Li) > Group 2 (Ca, Mg) > Group 3 (Al) > Transition metals (Zn, Fe, Cu) > Gold (Au) at bottom
+- Hydrogen can be placed in the series: metals ABOVE hydrogen react with acids; metals BELOW (e.g. copper, silver, gold) do NOT react with acids
 
-RUSTING (corrosion of iron):
-iron + water + oxygen → hydrated iron(III) oxide (rust)
-BOTH water AND oxygen are needed (neither alone causes rusting)
-Prevention: painting, oiling/greasing, galvanising (coating with zinc — zinc sacrificially corrodes), alloying (stainless steel = Fe + Cr + Ni), electroplating
+DISPLACEMENT REACTIONS:
+- A MORE reactive metal displaces a LESS reactive metal from a compound
+- e.g. Magnesium + copper sulfate → magnesium sulfate + copper; Mg + CuSO₄ → MgSO₄ + Cu
+- Can determine relative reactivity by testing whether displacement occurs between metal and another metal's compound
+- Design experiment with up to 5 metals: place each metal in solutions of other metal compounds; record observations (colour change, temperature change)
 
-ALLOYS (mixtures of metals or metals + other elements):
-- Stronger than pure metals because different-sized atoms disrupt regular lattice, preventing layers sliding
-- Steel: iron + carbon (up to 2%); stronger than iron; used in construction, cars
-- Stainless steel: iron + chromium + nickel; rust-resistant; used in cutlery, surgical instruments
-- Brass: copper + zinc; harder than copper; used in instruments, plumbing
-- Bronze: copper + tin; harder than copper; used historically for tools and weapons
+OXIDATION AND REDUCTION (REDOX):
+- Oxidation = gain of oxygen; Reduction = loss of oxygen (OIL RIG at this level)
+- Extracting metals with carbon = reduction of metal oxide; carbon is oxidised
+
+METALS AND ACIDS:
+- General word equation: Acid + Metal → Salt + Hydrogen
+- Salt name: sulfuric acid → metal sulfate; hydrochloric acid → metal chloride; nitric acid → metal nitrate
+- e.g. Mg + H₂SO₄ → MgSO₄ + H₂; Zn + 2HCl → ZnCl₂ + H₂
+- More reactive metal → more vigorous reaction → greater temperature rise → more hydrogen produced faster
+- Use temperature change to compare reactivity (graph: axes labelled with name and unit, consistent scale, line of best fit — NOT dot-to-dot)
+
+EXPERIMENTAL METHODS:
+- Independent variable: what you change; Dependent variable: what you measure/observe; Control variables: what you keep the same
+- Reliability: repeat experiment and calculate mean, excluding anomalies
+- Accuracy: control variables kept the same
+
+ACID FORMULAE: HCl (hydrochloric), H₂SO₄ (sulfuric), HNO₃ (nitric)
+Made of: H⁺ combined with Cl⁻, SO₄²⁻, NO₃⁻ respectively
+Salt formula: metal ion + negative ion from acid; overall charge must = 0
 
 MATERIALS:
-- Ceramics: made from clay baked at high temperatures; hard, brittle, high melting point, electrical insulators, chemically inert; e.g. bricks, pottery, glass, porcelain
-- Polymers/plastics: long chain molecules; thermosoftening polymers (weak forces between chains, melt on heating, remoulded) vs thermosetting polymers (cross-linked chains, cannot melt, harder)
-- Composites: two materials combined; matrix + reinforcement; properties of both components; e.g. fibreglass (glass fibres in resin), carbon fibre reinforced polymer (CFRP), concrete (cement + aggregate + water)`,
+- Composites: two or more different materials combined; combine the properties of each component; e.g. steel-reinforced concrete (strong and hard)
+- Polymers: unreactive; can be moulded; electrical insulators
+- Ceramics: hard and brittle; made by baking soft, mouldable clay in a kiln at high temperatures`,
 
-    'Earth and Atmosphere': `GCSE Chemistry — Earth and Atmosphere
+    '8.4 — Earth and Atmosphere': `Chemistry 8.4 — Earth and Atmosphere
 
-STRUCTURE OF THE EARTH:
-- Inner core: solid; iron and nickel; ~5,100–6,370 km depth; extreme pressure
-- Outer core: liquid; iron and nickel; generates Earth's magnetic field
-- Mantle: semi-solid (viscous) silicate rock; convection currents drive plate movement
-- Crust: solid; thin (oceanic ~6 km, continental ~35 km); broken into tectonic plates
+COMPOSITION OF THE ATMOSPHERE TODAY:
+- Nitrogen (N₂): ~78% — most abundant
+- Oxygen (O₂): ~21% — second most abundant
+- All other gases (argon, CO₂, water vapour, etc.): remaining ~1%
+- Test for pure oxygen: use a GLOWING splint → splint RELIGHTS (positive result)
 
-TECTONIC PLATES:
-- Lithosphere (crust + upper mantle) broken into ~12 major plates
-- Driven by convection currents in mantle
-- Plate boundaries: constructive (diverging — new crust formed), destructive (converging — subduction and volcanoes), conservative (sliding past — earthquakes)
-- Evidence: matching fossils across continents, matching rock types, continental shapes fitting together (Alfred Wegener — continental drift theory)
-
-THE ATMOSPHERE TODAY:
-- ~78% nitrogen (N₂)
-- ~21% oxygen (O₂)
-- ~1% argon (Ar)
-- ~0.04% carbon dioxide (CO₂)
-- Small amounts of water vapour and other gases
+EXPERIMENTS TO DETERMINE % OXYGEN IN AIR:
+All three methods rely on a reactant consuming the oxygen, causing the air volume to decrease:
+1. Iron in an inverted test tube in water: iron rusts, uses up O₂, water rises to fill the space
+2. Candle in a trough of water under an inverted beaker: candle burns, uses O₂, water rises
+3. Heated copper in a sealed gas syringe: copper oxidises, using O₂, syringe volume decreases
+In each case, the air volume decreases by ~21% when all the oxygen is used up (volume decreases to ~79% of original)
+Formula: Percentage of O₂ = (change in volume ÷ initial volume) × 100
 
 HISTORY OF THE ATMOSPHERE:
-- Early Earth (4.6 billion years ago): intense volcanic activity released mainly CO₂ and water vapour; little or no oxygen; also some nitrogen, methane, ammonia
-- Water vapour condensed → formed oceans (CO₂ also dissolved into oceans and formed carbonate rocks)
-- Oxygen appeared ~2.7 billion years ago: photosynthesis by cyanobacteria (blue-green algae) released O₂
-- CO₂ reduced: absorbed by oceans, photosynthesis, incorporated into fossil fuels and limestone
+- Early Earth: high levels of CO₂, water vapour and nitrogen from volcanic outgassing; little or no oxygen
+- As Earth cooled, water vapour condensed → formed the oceans
+- Large amounts of CO₂ dissolved into the newly formed oceans → reduced atmospheric CO₂
+- Early photosynthetic organisms (algae) evolved in oceans → used CO₂ for photosynthesis → released O₂ as a waste product → oxygen levels in atmosphere increased
 
-THE GREENHOUSE EFFECT:
-- Short-wave solar radiation passes through atmosphere and warms Earth's surface
-- Earth emits longer-wave infrared radiation
-- Greenhouse gases (CO₂, methane, water vapour, nitrous oxide) absorb this infrared and re-emit it → warms the atmosphere
-- Enhanced greenhouse effect: human emissions of CO₂ (fossil fuels), methane (livestock, landfill, rice paddies) and N₂O (fertilisers) increase warming → global climate change
+HUMAN IMPACT ON THE ATMOSPHERE:
+- Combustion of fossil fuels increases atmospheric CO₂
+- Deforestation increases CO₂ (trees no longer absorbing CO₂; burning/decomposing releases stored carbon)
+- CO₂ is a GREENHOUSE GAS: traps heat radiated from Earth's surface (the greenhouse effect)
+- Increased CO₂ from human activity → enhanced greenhouse effect → global warming
+- Global warming consequences: melting ice caps, rising sea levels, more extreme weather events
 
-ATMOSPHERIC POLLUTANTS:
-- Carbon dioxide (CO₂): greenhouse gas; produced by combustion of fossil fuels; contributes to climate change
-- Sulfur dioxide (SO₂): produced when fossil fuels containing sulfur are burned; forms sulfurous/sulfuric acid in rain → acid rain; damages buildings (limestone), trees, aquatic life
-- Oxides of nitrogen (NOₓ): formed when N₂ and O₂ react at high temperatures in engines; contribute to acid rain and photochemical smog
-- Carbon monoxide (CO): incomplete combustion; colourless, odourless, toxic; binds to haemoglobin preventing O₂ transport
-- Particulates (soot/carbon particles): from incomplete combustion; cause respiratory problems; climate effects`,
+THE CARBON CYCLE:
+- Atmosphere → plants: photosynthesis
+- Plants/animals/microorganisms → atmosphere: respiration
+- Atmosphere → sea: CO₂ dissolves in oceans
+- Combustion of fossil fuels → atmosphere
+- Plants → animals: eating/feeding
+- Sea animals → rocks (sediment): sedimentation → eventually form carbonate rocks
+- Animals/plants → microorganisms: decomposition
+- Animals/plants → fossil fuels: over millions of years (coal no longer forms — fungi evolved to decompose plants instead)
+
+STRUCTURE OF THE EARTH (4 layers, outside to inside):
+1. Crust: thin, outermost rocky layer
+2. Mantle: thick, semi-molten layer; convection currents in mantle drive tectonic plate movement
+3. Outer core: liquid iron and nickel; movement generates Earth's magnetic field
+4. Inner core: solid metallic centre (iron and nickel); extreme pressure keeps it solid despite high temperature
+
+ROCK TYPES:
+- Igneous rock: formed by cooling and solidification of molten rock (magma/lava); e.g. granite (slow cooling, large crystals), basalt (fast cooling, small crystals)
+- Sedimentary rock: formed by compaction and cementation of layers of sediment; e.g. sandstone, limestone, chalk
+- Metamorphic rock: formed when existing rocks are changed by intense heat and/or pressure; e.g. marble (from limestone), slate (from mudstone)`,
   },
 
   'Food Technology & Health': {
